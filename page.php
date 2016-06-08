@@ -17,7 +17,7 @@ class Page{
     private $code,$caption,$content,$parentCode,$isContainer,$aliasOf,$productCode;
     private $pcaption,$ptype,$pmeasure,$pprice,$pinfo,$pimage;
     private $view='main', $filename, $title = 'ТОВ "АЛАТАР" купить пиломатериалы недорого Киев';
-    public $productCategories = array(), $products = array(array());
+    public $productCategories = array(), $products = array();
     private $data = array(), $data1 = array(), $product_types = array();
     public $contacts = array(), $deliveries = array(), $payments = array();
 
@@ -53,23 +53,18 @@ class Page{
                 array_push($this->data1, self::$db->nextRow());
             }
             elseif($this->code === 'product'){
-
-
                 self::$db->SQL("SELECT caption FROM menu ORDER BY id;");
                 while($row = self::$db->nextRow()) {
                     array_push($this->data, $row);
-
                 }
-
-                $counterX = -1;
-               foreach($this->data as $row) {
-                   $counterX++;
-                   self::$db->SQL("SELECT * FROM products WHERE menu_type = ? ORDER BY id", $row['caption']);
-                   while($row1 = self::$db->nextRow()) {
-                        array_push($this->products[$counterX], $row1);
+                foreach($this->data as $row) {
+                    $ar = array();
+                    self::$db->SQL("SELECT * FROM products WHERE menu_type = ? ORDER BY id", $row['caption']);
+                    while($row1 = self::$db->nextRow()) {
+                        array_push($ar, $row1);
                     }
+                    array_push($this->products, $ar);
                 }
-
             }
             elseif ($this->code === 'vacancy') {
                 self::$db->SQL("SELECT * FROM vacancies");
