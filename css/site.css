@@ -1,0 +1,189 @@
+body:first-line{
+    content: '';
+}
+
+body{
+	background-color: #ffffff;
+	color: #330000;
+}
+
+.header-style{
+	background-color: #330000;
+	color: #ffcccc;
+	border-color: #330000;
+}
+.navbar-inverse .navbar-nav>li>a {
+	color: #ffffcc;
+}
+.navbar-inverse .navbar-brand {
+	color: #ffffcc;
+}
+
+.navbar-inverse .navbar-nav>li>a:visited {
+	color: #ffffcc;
+}
+.navbar-inverse .navbar-brand:visited {
+	color: #ffffcc;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover {
+	color: #FFE49E;
+}
+.navbar-inverse .navbar-brand:hover {
+	color: #FFE49E;
+}
+
+
+.style-order-button{
+	background-color: #330000;
+	border-color: #330000;
+	color: #ffffcc;
+}
+
+
+.style-order-button:hover{
+	background-color: #663333;
+	border-color: #663333;
+	color: #ffffcc;
+}
+.style-order-button:focus{
+	background-color: #330000;
+	border-color: #330000;
+	color: #ffffcc;
+}
+.style-order-button:active{
+	background-color: #330000;
+	border-color: #330000;
+	color: #ffffcc;
+}
+
+
+.panel-default{
+	border-color: #330000;
+}
+
+.panel-default>.style-panel-head-main{
+	background-color: #ffffcc;
+	border-color: #330000;
+	color: #330000;
+}
+
+.panel-default>.style-panel-body-main{
+	background-color: #ffffff;
+	border-color: #993333;
+}
+
+h1 small{
+	color: #794242;
+}
+
+a {
+	color: #330000;
+}
+
+a:hover{
+	color: #330000;
+}
+
+.block-product-item-style{
+	border-color: #330000;
+}
+
+  
+  /*-------input[type = file]  style  */
+.fileform {
+        background-color: #FFFFFF;
+        border: 1px solid #CCCCCC;
+        border-radius: 2px;
+        cursor: pointer;
+        height: 26px;
+        overflow: hidden;
+        padding: 2px;
+        position: relative;
+        text-align: left;
+        vertical-align: middle;
+        width: 100%;
+    }
+
+    .fileform .selectbutton {
+        background-color: #5cb85c;
+        border: 1px solid #939494;
+        border-radius: 2px;
+        color: #FFFFFF;
+        float: right;
+        font-size: 14px;
+        height: 20px;
+        line-height: 20px;
+        overflow: hidden;
+        padding: 0px 2px;
+        text-align: center;
+        vertical-align: middle;
+        width: 25%;
+    }
+
+    .fileform #image{
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        -moz-opacity: 0;
+        filter: alpha(opacity=0);
+        opacity: 0;
+        font-size: 150px;
+        height: 30px;
+        z-index:20;
+    }
+
+    .fileform #fileformlabel {
+        background-color: #FFFFFF;
+        float: left;
+        height: 22px;
+        line-height: 22px;
+        overflow: hidden;
+        padding: 2px;
+        text-align: left;
+        vertical-align: middle;
+        width: 75%;
+    }
+    /*-----END--input[type = file]  style  */
+
+
+.header-tel-number{
+	padding-right: 15px;
+    padding-left: 15px;
+}
+.header-tel-number span{
+	float: left;
+	padding-top: 5px;
+	margin-bottom: -10px;
+}
+
+.header-tel-number span:not(:first-of-type){
+	float: right;
+	padding: 5px 0 0 15px;	
+}
+
+.header-tel-number>span>a{
+	color: #ffcccc;
+}
+
+.navbar-brand{
+	font-size: 30px;
+}
+
+.navbar{
+	min-height: 70px;
+}
+
+.navbar > .container{
+	bottom: 0;
+}
+
+@media all and (max-width:767px){
+    .carousel{
+        display:none;
+    }
+    .my-hide{
+        display: none;
+    }
+}
