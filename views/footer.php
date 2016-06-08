@@ -1,0 +1,81 @@
+<?
+?>
+</div>
+<footer id = "footer" style="margin-top: 40px;">
+    <div class="row">
+        <div class="col-lg-12 col-sm-12">
+            <div class="col-lg-3 col-sm-3 col-xs-6">
+            	<h4>Контакти</h4>
+            	<p><i class="fa fa-home"></i> Україна, Київ, вул. Пухівська 1а</p>
+                <p><i class="fa fa-phone"></i> 093-238-32-62</p>
+                <p><i class="fa fa-envelope-o"></i> alatar@gmail.com</p>
+            	         
+            </div>
+            <div class="col-lg-3 col-sm-3 col-xs-6 ">
+            	<h4>Доставка</h4>
+            	    <p><i class="fa fa-car"></i> Самовивіз</p>
+                    <p><i class="fa fa-truck"></i> Наш транспорт (м. Київ, Київська обл.)</p>
+            </div>
+            <div class="col-lg-3 col-sm-3 col-xs-6 my-hide">
+            	<h4>Способи оплати</h4>
+            	    <p><i class="fa fa-money"></i> Готівкою</p>
+                    <p><i class="fa fa-bank"></i> Банківський переказ</p>
+            </div>
+            <div class = "col-lg-3 col-sm-3 col-xs-12 ">
+            	<h4 class = "main-text">1995 - 2016 ТОВ "АЛАТАР"</h4>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+</div>
+<script src="/script/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/script/bootstrap.min.js"></script>
+<!--<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>-->
+<script src="/script/add_product.js"></script>
+<script src="/script/left_menu.js"></script>
+<script src="/script/order.js"></script>
+<script src="/script/enterAdmin.js"></script>
+<script src="/script/map_change.js"></script>
+<script src="/script/contacts_change.js"></script>
+<script src="/script/delivery_change.js"></script>
+<script src="/script/vacancy_change.js"></script>
+<script src="/script/order_success.js"></script>
+<script src="/adminka/script/search.js"></script>
+<script src="/adminka/script/admin_fw_src.js"></script>
+<script type="text/javascript" src="/ckeditor/ckeditor.js"></script>
+<script src="/script/bootstrap.min.js"></script>
+<script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+</script>
+
+</body>
+
+</html>
+
+<style>
+html {
+    position: relative;
+}
+#footer{
+	bottom: 0;
+    margin: 50px 0 0 0;
+}
+.page {
+    display: table-row;
+    height: 100%;
+}
+.container{
+    position: relative;
+    display: table;
+    height: 100%;
+}
+    .main-text{
+        text-align: center;
+    }
+</style>
