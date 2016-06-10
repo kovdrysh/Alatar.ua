@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1:3306
--- Час створення: Чрв 09 2016 р., 10:35
+-- Час створення: Чрв 10 2016 р., 15:45
 -- Версія сервера: 5.5.41-log
 -- Версія PHP: 5.3.29
 
@@ -41,21 +41,41 @@ INSERT INTO `map` (`id`, `map_link`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблиці `menu`
+-- Структура таблиці `menu_en`
 --
 
-CREATE TABLE IF NOT EXISTS `menu` (
+CREATE TABLE IF NOT EXISTS `menu_en` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `caption` varchar(30) NOT NULL,
+  `caption` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `caption` (`caption`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Дамп даних таблиці `menu_en`
+--
+
+INSERT INTO `menu_en` (`id`, `caption`) VALUES
+(1, 'Lumber an workpiece');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблиці `menu_ukr`
+--
+
+CREATE TABLE IF NOT EXISTS `menu_ukr` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `caption` varchar(100) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `caption` (`caption`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
--- Дамп даних таблиці `menu`
+-- Дамп даних таблиці `menu_ukr`
 --
 
-INSERT INTO `menu` (`id`, `caption`) VALUES
+INSERT INTO `menu_ukr` (`id`, `caption`) VALUES
 (1, 'Пиломатеріали і заготовки'),
 (2, 'Тара і упаковка');
 
@@ -74,7 +94,7 @@ CREATE TABLE IF NOT EXISTS `orders` (
   `date` datetime NOT NULL,
   `done` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=16 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=18 ;
 
 --
 -- Дамп даних таблиці `orders`
@@ -86,58 +106,117 @@ INSERT INTO `orders` (`id`, `name`, `telNumber`, `email`, `info`, `date`, `done`
 (12, '', '5350694', '', '', '2016-01-27 13:58:00', 1),
 (13, '', '1111', '', '', '2016-01-27 13:58:00', 1),
 (14, 'Владислав', '0639405773', 'ждьыдвлм', '&lt;p&gt;Брус 100х520 20 шт&lt;/p&gt;\r\n', '2016-02-01 14:52:00', 1),
-(15, '', 'asdas', '', '', '2016-02-05 15:21:00', 0);
+(16, 'Юрий Валериевич', '+38067-555-34-29', NULL, '&lt;p&gt;ыаыва&lt;/p&gt;\r\n', '2016-06-10 13:27:00', 0);
 
 -- --------------------------------------------------------
 
 --
--- Структура таблиці `pages`
+-- Структура таблиці `pages_en`
 --
 
-CREATE TABLE IF NOT EXISTS `pages` (
+CREATE TABLE IF NOT EXISTS `pages_en` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `code` varchar(200) NOT NULL,
   `caption` text,
   `content` text,
-  `parentCode` text,
-  `isContainer` tinyint(1) DEFAULT NULL,
-  `aliasOf` text,
-  `productCode` varchar(200) DEFAULT NULL,
+  `isContainer` tinyint(4) DEFAULT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `code` (`code`),
-  KEY `productCode` (`productCode`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=18 ;
+  UNIQUE KEY `code` (`code`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=16 ;
 
 --
--- Дамп даних таблиці `pages`
+-- Дамп даних таблиці `pages_en`
 --
 
-INSERT INTO `pages` (`id`, `code`, `caption`, `content`, `parentCode`, `isContainer`, `aliasOf`, `productCode`) VALUES
-(1, 'main', 'ТОВ "АЛАТАР" купить пиломатериалы недорого Киев', '<p>Ищете качественные пиломатериалы? Наш ассортимент - это десятки наименований продуктов распила древесины по отличным ценам. Специалисты нашей компании сделают все возможное, чтобы Вы остались довольны сотрудничеством с нами. Они непременно предложат Вам:\r\n	                </p>\r\n	                <p><strong>Индивидуальный подход</strong></p>\r\n	                <p>\r\n	                У Вас есть особые требования к размерам пиломатериалов?  Мы легко изготовим продукцию нужных форм и габаритов. Наши специалисты выполнят работу в срок, строго придерживаясь всех оговоренных деталей заказа.\r\n	                </p>\r\n	                <p><strong>\r\n	                Отличный ассортимент\r\n	                </strong> </p>\r\n	                <p>\r\n	                Широкий выбор продуктов распила древесины – еще одно преимущество сотрудничества с нами. Половая доска, доска обрезная и не обрезная, брус, вагонка, рейка, плинтус, блок-хауз, наличник, лестницы, двери и короба для них, подоконники и столешницы – только часть нашего ассортимента. Мы предложим Вашему вниманию пиломатериалы из бука, дуба, сосны, липы или ольхи.\r\n	                </p>\r\n	                <p><strong>\r\n	                Контроль качества\r\n	                </strong></p>\r\n	                <p>\r\n	                О каком наименовании товара не шла бы речь, мы гарантируем его качество. При изготовлении пиломатериалов, все производственные процессы тщательно контролируются квалифицированными специалистами.\r\n	                </p>\r\n	                <p><strong>\r\n	                Система бонусов и скидок\r\n	                </strong></p>\r\n	                <p>\r\n	                Мы всегда открыты к сотрудничеству, поэтому для постоянных покупателей у нас действуют специальные предложения, приятные бонусы и выгодные скидки.\r\n	                </p>\r\n	                <p><strong>\r\n	                Профессиональная консультация\r\n	                </strong></p>\r\n	                <p>\r\n	                Наши сотрудники грамотно ответят на любые вопросы о продукции компании, помогут правильно подобрать материал и сориентироваться в  ассортименте. Позвоните или напишите, чтобы получить подробную информацию об интересующем Вас товаре.\r\n	                </p>\r\n	                <p><strong>\r\n	                Приятные цены\r\n	                </strong></p>\r\n	                <p>\r\n	                Покупайте качественные материалы по выгодной цене! Мы не делаем неоправданных «накруток», поэтому стоимость нашей продукции всегда остается демократичной. Вам понравятся наши выгодные ценовые предложения!\r\n	                </p>\r\n	                <p><strong>\r\n	                Удобная доставка\r\n	                </strong></p>\r\n	                <p>\r\n	                Желаете купить пиломатериалы в Киеве, или хотите заказать их в любой другой регион Украины? География наших поставок охватывает всю страну. Компания сотрудничает сразу с несколькими крупными перевозчиками, а доставка пиломатериалов по Киеву и области может осуществляться нашим транспортом. Также возможен вариант самовывоза.\r\n	                </p>', NULL, 1, NULL, NULL),
-(2, 'delivery', 'Доставка пиломатеріалів ТОВ "АЛАТАР"', NULL, NULL, 1, NULL, NULL),
-(3, 'contacts', 'Контактна інформація ТОВ "АЛАТАР" Київ', NULL, NULL, 1, NULL, NULL),
-(4, 'product', 'Товари - найкращі пиломатеріали в Києві, ТОВ "АЛАТАР"', NULL, NULL, 1, NULL, NULL),
-(5, 'order', 'Замовлення пиломатеріалів, Київ ТОВ "АЛАТАР"', NULL, NULL, 1, NULL, NULL),
-(6, 'brus-fugovanyi', NULL, NULL, NULL, 0, NULL, NULL),
-(7, 'doshka-svizha', NULL, NULL, NULL, 0, NULL, NULL),
-(8, 'admin', 'Сторінка адміністратора ТОВ "АЛАТАР"', NULL, NULL, 1, NULL, NULL),
-(9, 'add-product', 'Додати новий товар ТОВ "АЛАТАР"', NULL, NULL, 1, NULL, NULL),
-(10, 'add-product-type', 'Додати нову категорію товарів ТОВ "АЛАТАР"', NULL, NULL, 1, NULL, NULL),
-(11, 'contacts_change', 'Зміна контактної інформації ТОВ "АЛАТАР"', NULL, NULL, 1, NULL, NULL),
-(12, 'map_change', 'Зміна інформації про мапу ТОВ "АЛАТАР"', NULL, NULL, 1, NULL, NULL),
-(13, 'orders', NULL, NULL, NULL, 1, NULL, NULL),
-(14, 'delivery-change', NULL, NULL, NULL, 1, NULL, NULL),
-(15, 'about', NULL, NULL, NULL, 1, NULL, NULL),
-(16, 'vacancy', NULL, NULL, NULL, 1, NULL, NULL),
-(17, 'vacancy-change', NULL, NULL, NULL, 1, NULL, NULL);
+INSERT INTO `pages_en` (`id`, `code`, `caption`, `content`, `isContainer`) VALUES
+(1, 'main', 'ТОВ "АЛАТАР" купить пиломатериалы недорого Киев', '<p>Ищете качественные пиломатериалы? Наш ассортимент - это десятки наименований продуктов распила древесины по отличным ценам. Специалисты нашей компании сделают все возможное, чтобы Вы остались довольны сотрудничеством с нами. Они непременно предложат Вам:\r\n	                </p>\r\n	                <p><strong>Индивидуальный подход</strong></p>\r\n	                <p>\r\n	                У Вас есть особые требования к размерам пиломатериалов?  Мы легко изготовим продукцию нужных форм и габаритов. Наши специалисты выполнят работу в срок, строго придерживаясь всех оговоренных деталей заказа.\r\n	                </p>\r\n	                <p><strong>\r\n	                Отличный ассортимент\r\n	                </strong> </p>\r\n	                <p>\r\n	                Широкий выбор продуктов распила древесины – еще одно преимущество сотрудничества с нами. Половая доска, доска обрезная и не обрезная, брус, вагонка, рейка, плинтус, блок-хауз, наличник, лестницы, двери и короба для них, подоконники и столешницы – только часть нашего ассортимента. Мы предложим Вашему вниманию пиломатериалы из бука, дуба, сосны, липы или ольхи.\r\n	                </p>\r\n	                <p><strong>\r\n	                Контроль качества\r\n	                </strong></p>\r\n	                <p>\r\n	                О каком наименовании товара не шла бы речь, мы гарантируем его качество. При изготовлении пиломатериалов, все производственные процессы тщательно контролируются квалифицированными специалистами.\r\n	                </p>\r\n	                <p><strong>\r\n	                Система бонусов и скидок\r\n	                </strong></p>\r\n	                <p>\r\n	                Мы всегда открыты к сотрудничеству, поэтому для постоянных покупателей у нас действуют специальные предложения, приятные бонусы и выгодные скидки.\r\n	                </p>\r\n	                <p><strong>\r\n	                Профессиональная консультация\r\n	                </strong></p>\r\n	                <p>\r\n	                Наши сотрудники грамотно ответят на любые вопросы о продукции компании, помогут правильно подобрать материал и сориентироваться в  ассортименте. Позвоните или напишите, чтобы получить подробную информацию об интересующем Вас товаре.\r\n	                </p>\r\n	                <p><strong>\r\n	                Приятные цены\r\n	                </strong></p>\r\n	                <p>\r\n	                Покупайте качественные материалы по выгодной цене! Мы не делаем неоправданных «накруток», поэтому стоимость нашей продукции всегда остается демократичной. Вам понравятся наши выгодные ценовые предложения!\r\n	                </p>\r\n	                <p><strong>\r\n	                Удобная доставка\r\n	                </strong></p>\r\n	                <p>\r\n	                Желаете купить пиломатериалы в Киеве, или хотите заказать их в любой другой регион Украины? География наших поставок охватывает всю страну. Компания сотрудничает сразу с несколькими крупными перевозчиками, а доставка пиломатериалов по Киеву и области может осуществляться нашим транспортом. Также возможен вариант самовывоза.\r\n	                </p>', 1),
+(2, 'contacts', 'Контактна інформація ТОВ "АЛАТАР" Київ', NULL, 1),
+(3, 'product', 'Products - the best lumber in Kyiv, Alatar LTD', NULL, 1),
+(4, 'order', 'Замовлення пиломатеріалів, Київ ТОВ "АЛАТАР"', NULL, 1),
+(5, 'admin', 'Сторінка адміністратора ТОВ "АЛАТАР"', NULL, 1),
+(6, 'map_change', 'Зміна інформації про мапу ТОВ "АЛАТАР"', NULL, NULL),
+(7, 'orders', NULL, NULL, 1),
+(8, 'about', NULL, NULL, 1),
+(9, 'vacancy', NULL, NULL, 1),
+(10, 'vacancy-change', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
 --
--- Структура таблиці `products`
+-- Структура таблиці `pages_ukr`
 --
 
-CREATE TABLE IF NOT EXISTS `products` (
+CREATE TABLE IF NOT EXISTS `pages_ukr` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `code` varchar(200) NOT NULL,
+  `caption` text,
+  `content` text,
+  `isContainer` tinyint(4) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `code` (`code`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=19 ;
+
+--
+-- Дамп даних таблиці `pages_ukr`
+--
+
+INSERT INTO `pages_ukr` (`id`, `code`, `caption`, `content`, `isContainer`) VALUES
+(1, 'main', 'ТОВ "АЛАТАР" купить пиломатериалы недорого Киев', '<p>Ищете качественные пиломатериалы? Наш ассортимент - это десятки наименований продуктов распила древесины по отличным ценам. Специалисты нашей компании сделают все возможное, чтобы Вы остались довольны сотрудничеством с нами. Они непременно предложат Вам:\r\n	                </p>\r\n	                <p><strong>Индивидуальный подход</strong></p>\r\n	                <p>\r\n	                У Вас есть особые требования к размерам пиломатериалов?  Мы легко изготовим продукцию нужных форм и габаритов. Наши специалисты выполнят работу в срок, строго придерживаясь всех оговоренных деталей заказа.\r\n	                </p>\r\n	                <p><strong>\r\n	                Отличный ассортимент\r\n	                </strong> </p>\r\n	                <p>\r\n	                Широкий выбор продуктов распила древесины – еще одно преимущество сотрудничества с нами. Половая доска, доска обрезная и не обрезная, брус, вагонка, рейка, плинтус, блок-хауз, наличник, лестницы, двери и короба для них, подоконники и столешницы – только часть нашего ассортимента. Мы предложим Вашему вниманию пиломатериалы из бука, дуба, сосны, липы или ольхи.\r\n	                </p>\r\n	                <p><strong>\r\n	                Контроль качества\r\n	                </strong></p>\r\n	                <p>\r\n	                О каком наименовании товара не шла бы речь, мы гарантируем его качество. При изготовлении пиломатериалов, все производственные процессы тщательно контролируются квалифицированными специалистами.\r\n	                </p>\r\n	                <p><strong>\r\n	                Система бонусов и скидок\r\n	                </strong></p>\r\n	                <p>\r\n	                Мы всегда открыты к сотрудничеству, поэтому для постоянных покупателей у нас действуют специальные предложения, приятные бонусы и выгодные скидки.\r\n	                </p>\r\n	                <p><strong>\r\n	                Профессиональная консультация\r\n	                </strong></p>\r\n	                <p>\r\n	                Наши сотрудники грамотно ответят на любые вопросы о продукции компании, помогут правильно подобрать материал и сориентироваться в  ассортименте. Позвоните или напишите, чтобы получить подробную информацию об интересующем Вас товаре.\r\n	                </p>\r\n	                <p><strong>\r\n	                Приятные цены\r\n	                </strong></p>\r\n	                <p>\r\n	                Покупайте качественные материалы по выгодной цене! Мы не делаем неоправданных «накруток», поэтому стоимость нашей продукции всегда остается демократичной. Вам понравятся наши выгодные ценовые предложения!\r\n	                </p>\r\n	                <p><strong>\r\n	                Удобная доставка\r\n	                </strong></p>\r\n	                <p>\r\n	                Желаете купить пиломатериалы в Киеве, или хотите заказать их в любой другой регион Украины? География наших поставок охватывает всю страну. Компания сотрудничает сразу с несколькими крупными перевозчиками, а доставка пиломатериалов по Киеву и области может осуществляться нашим транспортом. Также возможен вариант самовывоза.\r\n	                </p>', 1),
+(3, 'contacts', 'Контактна інформація ТОВ "АЛАТАР" Київ', NULL, 1),
+(4, 'product', 'Товари - найкращі пиломатеріали в Києві, ТОВ "АЛАТАР"', NULL, 1),
+(5, 'order', 'Замовлення пиломатеріалів, Київ ТОВ "АЛАТАР"', NULL, 1),
+(8, 'admin', 'Сторінка адміністратора ТОВ "АЛАТАР"', NULL, 1),
+(12, 'map_change', 'Зміна інформації про мапу ТОВ "АЛАТАР"', NULL, NULL),
+(13, 'orders', NULL, NULL, 1),
+(15, 'about', NULL, NULL, 1),
+(16, 'vacancy', NULL, NULL, 1),
+(17, 'vacancy-change', NULL, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблиці `products_en`
+--
+
+CREATE TABLE IF NOT EXISTS `products_en` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `caption` varchar(200) NOT NULL,
+  `menu_type` varchar(100) NOT NULL,
+  `measure` text NOT NULL,
+  `price` float DEFAULT NULL,
+  `info` text,
+  `image` text,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `caption` (`caption`),
+  KEY `menu_type` (`menu_type`),
+  KEY `menu_type_2` (`menu_type`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=16 ;
+
+--
+-- Дамп даних таблиці `products_en`
+--
+
+INSERT INTO `products_en` (`id`, `caption`, `menu_type`, `measure`, `price`, `info`, `image`) VALUES
+(1, 'Брус', 'Пиломатеріали і заготовки', 'куб.м', 100, NULL, 'brus.jpg'),
+(2, 'Будівна дошка', 'Пиломатеріали і заготовки', 'куб.м', 100, NULL, 'doska_svizhopyl.jpg'),
+(3, 'Обрізна дошка', 'Пиломатеріали і заготовки', 'куб.м', 100, NULL, 'doshka_obrizna.jpg'),
+(4, 'Дошка необрізна', 'Пиломатеріали і заготовки', 'куб.м', 100, NULL, 'doshka_neobrizna.jpg'),
+(5, 'Лаги', 'Пиломатеріали і заготовки', 'куб.м', 100, NULL, 'lagi.jpg'),
+(6, 'Рейка', 'Пиломатеріали і заготовки', 'куб.м', 100, NULL, 'reika.jpg'),
+(7, 'Шпала', 'Пиломатеріали і заготовки', 'куб.м', 100, NULL, 'shpala.jpg'),
+(8, 'Дрова паливні', 'Пиломатеріали і заготовки', 'куб.м', 100, NULL, 'drova.jpg'),
+(9, 'Дерев''яна тирса', 'Пиломатеріали і заготовки', 'куб.м', 100, NULL, 'tursa.jpg'),
+(10, 'Піддон', 'Тара і упаковка', 'шт', 100, NULL, 'poddon.jpg'),
+(11, 'Ящик', 'Тара і упаковка', 'шт', 100, NULL, 'yashik.jpg'),
+(12, 'Тарна дошка', 'Пиломатеріали і заготовки', 'куб.м', 100, NULL, 'doshka-tvirna.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблиці `products_ukr`
+--
+
+CREATE TABLE IF NOT EXISTS `products_ukr` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `caption` varchar(200) NOT NULL,
   `menu_type` varchar(30) NOT NULL,
@@ -151,11 +230,11 @@ CREATE TABLE IF NOT EXISTS `products` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=30 ;
 
 --
--- Дамп даних таблиці `products`
+-- Дамп даних таблиці `products_ukr`
 --
 
-INSERT INTO `products` (`id`, `caption`, `menu_type`, `measure`, `price`, `info`, `image`) VALUES
-(7, 'Брус', 'Пиломатеріали і заготовки', 'куб.м', 100, NULL, 'brus.jpg'),
+INSERT INTO `products_ukr` (`id`, `caption`, `menu_type`, `measure`, `price`, `info`, `image`) VALUES
+(7, 'Брус', 'Пиломатеріали і заготовки', 'куб.м', 140, NULL, 'brus.jpg'),
 (19, 'Будівна дошка', 'Пиломатеріали і заготовки', 'куб.м', 100, NULL, 'doska_svizhopyl.jpg'),
 (20, 'Обрізна дошка', 'Пиломатеріали і заготовки', 'куб.м', 100, NULL, 'doshka_obrizna.jpg'),
 (21, 'Дошка необрізна', 'Пиломатеріали і заготовки', 'куб.м', 100, NULL, 'doshka_neobrizna.jpg'),
@@ -171,30 +250,31 @@ INSERT INTO `products` (`id`, `caption`, `menu_type`, `measure`, `price`, `info`
 -- --------------------------------------------------------
 
 --
--- Структура таблиці `users`
+-- Структура таблиці `vacancies_en`
 --
 
-CREATE TABLE IF NOT EXISTS `users` (
+CREATE TABLE IF NOT EXISTS `vacancies_en` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `login` varchar(200) NOT NULL,
-  `password` varchar(200) NOT NULL,
+  `caption` varchar(200) NOT NULL,
+  `info` varchar(500) DEFAULT NULL,
+  `image` text,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
--- Дамп даних таблиці `users`
+-- Дамп даних таблиці `vacancies_en`
 --
 
-INSERT INTO `users` (`id`, `login`, `password`) VALUES
-(1, 'admin', '1111');
+INSERT INTO `vacancies_en` (`id`, `caption`, `info`, `image`) VALUES
+(1, 'Сбивщик поддонов', 'Сбивка поддонов.', 'poddon.jpg');
 
 -- --------------------------------------------------------
 
 --
--- Структура таблиці `vacancies`
+-- Структура таблиці `vacancies_ukr`
 --
 
-CREATE TABLE IF NOT EXISTS `vacancies` (
+CREATE TABLE IF NOT EXISTS `vacancies_ukr` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `caption` varchar(200) NOT NULL,
   `info` varchar(500) DEFAULT NULL,
@@ -203,10 +283,10 @@ CREATE TABLE IF NOT EXISTS `vacancies` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
--- Дамп даних таблиці `vacancies`
+-- Дамп даних таблиці `vacancies_ukr`
 --
 
-INSERT INTO `vacancies` (`id`, `caption`, `info`, `image`) VALUES
+INSERT INTO `vacancies_ukr` (`id`, `caption`, `info`, `image`) VALUES
 (1, 'Сбивщик поддонов', 'Сбивка поддонов.', 'poddon.jpg');
 
 --
@@ -214,10 +294,16 @@ INSERT INTO `vacancies` (`id`, `caption`, `info`, `image`) VALUES
 --
 
 --
--- Обмеження зовнішнього ключа таблиці `products`
+-- Обмеження зовнішнього ключа таблиці `products_en`
 --
-ALTER TABLE `products`
-  ADD CONSTRAINT `products_ibfk_1` FOREIGN KEY (`menu_type`) REFERENCES `menu` (`caption`);
+ALTER TABLE `products_en`
+  ADD CONSTRAINT `products_en_ibfk_1` FOREIGN KEY (`menu_type`) REFERENCES `menu_ukr` (`caption`);
+
+--
+-- Обмеження зовнішнього ключа таблиці `products_ukr`
+--
+ALTER TABLE `products_ukr`
+  ADD CONSTRAINT `products_ukr_ibfk_1` FOREIGN KEY (`menu_type`) REFERENCES `menu_ukr` (`caption`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
