@@ -48,7 +48,7 @@
     background-color: #fff;
 }
 .admin-view-table tr{
-    border-top: 4px solid #F1F1F1;
+    border-bottom: 4px solid #F1F1F1;
 }
 .admin-view-table tr td:first-of-type, td:nth-of-type(2){
     padding: 6px;

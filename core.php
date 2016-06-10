@@ -14,10 +14,31 @@ if(isset($_GET['exit'])){
         echo '<script type="text/javascript">window.location.href="/"</script>';
     }
 }
+session_start();
+
 include '/Recordset.php';
 include '/page.php';
 Page::$db = new Recordset();
 Page::$db->connect(Page::$host, Page::$dbname, Page::$user, Page::$pass);
+
+if(isset($_SESSION['lang'])){
+    Page::$languagePrefix = $_SESSION['lang'];
+}
+else{
+    Page::$languagePrefix = '_ukr';
+}
+if(isset($_SESSION['lang'])){
+    if($_SESSION['lang'] == '_en'){
+        Page::$local_const = parse_ini_file('/en.ini', true);
+    }
+    elseif($_SESSION['lang'] == '_ukr'){
+        Page::$local_const = parse_ini_file('/ukr.ini', true);
+    }
+}
+else{
+    Page::$local_const = parse_ini_file('/ukr.ini', true);
+}
+
 
 $code = "main";
 $routes = explode('/', $_SERVER['REQUEST_URI']);
@@ -44,11 +65,13 @@ else {
     if (!empty($routes[0])) {
         $code = $routes[0];
     }
-    $page = new Page($code, false);
+
+    $page = new Page($code);
 
     $page->getContent();
 
     $title = $page->getTitle();
+
     include '/views/header.php';
     $page->publish();
     include '/views/footer.php';

@@ -46,6 +46,8 @@
 <nav class="navbar navbar-inverse navbar-fixed-top header-style" role="navigation">
     <div class="header-tel-number col-lg-10 col-lg-offset-1 col-xs-12">
         <span><i class="fa fa-phone"></i> 093-238-32-62</span>
+        <span class="lang" id="ukr" title="Українською"><img src="/images/Ukraine-Flag.png"></span>
+        <span class="lang" id="en" title="English"><img src="/images/United-Kingdom-flag.png"></span>
         <?if(IN_ADMIN) {?>
             <span><a href="?exit=1">Вийти</a></span>
             <span><a href="/admin">Сторінка адміністратора</a></span>
@@ -60,25 +62,25 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>            
-            <a class="navbar-brand" href="/">АЛАТАР</a>            
+            <a class="navbar-brand" href="/"><?=Page::$local_const['Alatar']?></a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="/"><i class = "fa fa-home"></i> Головна</a>
+                    <a href="/"><i class = "fa fa-home"></i> <?=Page::$local_const['main_page']?></a>
                 </li>
                 <li>
-                    <a href="/about"><i class = "fa fa-tree"></i> Про компанію</a>
+                    <a href="/about"><i class = "fa fa-tree"></i> <?=Page::$local_const['about']?></a>
                 </li>
                 <li>
-                    <a href="/product"><i class = "fa fa-bars"></i> Товари</a>
+                    <a href="/product"><i class = "fa fa-bars"></i> <?=Page::$local_const['products']?></a>
                 </li>
                 <li>
-                    <a href="/vacancy"><i class="fa fa-info"></i> Вакансії</a>
+                    <a href="/vacancy"><i class="fa fa-info"></i> <?=Page::$local_const['vacancy']?></a>
                 </li>
                 <li>
-                    <a href="/order"><i class="fa fa-trash"></i> Замовлення</a>
+                    <a href="/order"><i class="fa fa-trash"></i> <?=Page::$local_const['order']?></a>
                 </li>
                 
                 
@@ -91,8 +93,8 @@
 <a href="" class="overlay" id="win2"></a>
     <div class="popup">
         <div class = "order-success">
-            <h2>Ваша заявка прийнята!</h2>
-            <h4>Адміністратор зателефонує Вам найближчим часом для уточнення деталей.</h4>
+            <h2><?=Page::$local_const['order_success1']?></h2>
+            <h4><?=Page::$local_const['order_success2']?></h4>
             <a href="/"><button type="button" class="btn btn-primary">На головну</button></a>
             <a href = "/product"><button type="button" class="btn btn-primary">До списку товарів</button></a>
         </div>

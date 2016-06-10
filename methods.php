@@ -295,4 +295,15 @@ class SQLMethods{
 
     }
 
+    public static function setLanguageInfo($lang){
+        session_start();
+        if($lang == 'ukr'){
+            $_SESSION['lang'] = '_ukr';
+        }
+        elseif($lang == 'en'){
+            $_SESSION['lang'] = '_en';
+        }
+        var_dump($_SESSION);
+    }
+
 }

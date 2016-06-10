@@ -2,18 +2,18 @@
     <div class="page">
     <div class="row">
             <div class="col-md-8">
-                <h3>Ваше замовлення</h3>
+                <h3><?=Page::$local_const['your_order']?></h3>
                 
                     <div class="control-group form-group">
                         <div class="controls">
-                            <label>Ім'я:</label>
+                            <label><?=Page::$local_const['name']?>:</label>
                             <input type="text" class="form-control" id="name" required data-validation-required-message="Please enter your name.">
                             <p class="help-block"></p>
                         </div>
                     </div>
                     <div class="control-group form-group">
                         <div class="controls">
-                            <label>Телефон:</label>
+                            <label><?=Page::$local_const['phone_number']?>:</label>
                             <input type="tel" class="form-control" id="phone" required data-validation-required-message="Please enter your phone number.">
                             <p class="help-block" id = "tel-hide"></p>
                         </div>
@@ -26,13 +26,13 @@
                     </div>
                     <div class="control-group form-group">
                         <div class="controls">
-                            <label>Інформація для замовлення:</label>
+                            <label><?=Page::$local_const['order_information']?>:</label>
                             <textarea rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
                         </div>
                     </div>
                     <div id="success"></div>
                     <!-- For success/fail messages -->
-                    <button type="submit" class="btn btn-primary style-order-button" onmousedown="keyDown(this)" onclick="sendOrder(this)">Відправити</button>
+                    <button type="submit" class="btn btn-primary style-order-button" onmousedown="keyDown(this)" onclick="sendOrder(this)"><?=Page::$local_const['make_order']?></button>
                 
             </div>
     </div>

@@ -16,13 +16,13 @@ if ($enter_post == 'true')
 {
 	$_SESSION['login'] = $login_post;
 	$_SESSION['passw'] = $passw_post;
+	//session_write_close();
 }
 if (empty($_SESSION['login']) or
 	$login != $_SESSION['login'] or
-	$passw != $_SESSION['passw'])
-{
-	define("IN_ADMIN", FALSE);
-	echo false;
+	$passw != $_SESSION['passw']){
+		define("IN_ADMIN", FALSE);
+		echo false;
 }
 else{
 	define("IN_ADMIN", TRUE);

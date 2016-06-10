@@ -12,11 +12,9 @@
         <div class="col-md-12">
             <div class="error-template">
 
-                <h1>404!</h1>
-                <h2>Сторінку не знайдено!</h2>
-                <div class="error-details">
-                    Вибачте, але данної сторінки не існує.
-                </div>
+                <h1>Error 404</h1>
+                <h2><?=Page::$local_const['text1_404']?></h2>
+                <div class="error-details"><?=Page::$local_const['text2_404']?></div>
                 <div class="error-actions">
                     <a href="/"><button type="button" class="btn btn-primary style-order-button">На головну</button></a>
                     <a href="/products"><button type="button" class="btn btn-primary style-order-button">До списку товарів</button></a>

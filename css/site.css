@@ -151,6 +151,7 @@ a:hover{
 .header-tel-number{
 	padding-right: 15px;
     padding-left: 15px;
+    padding-bottom: 10px;
 }
 .header-tel-number span{
 	float: left;
@@ -178,6 +179,14 @@ a:hover{
 .navbar > .container{
 	bottom: 0;
 }
+
+.lang:hover{
+    cursor: pointer;
+}
+.lang{
+    margin-left: 10px;
+}
+
 
 @media all and (max-width:767px){
     .carousel{

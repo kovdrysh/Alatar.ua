@@ -48,13 +48,13 @@
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">
-                    Наші послуги
+                    <?=Page::$local_const['our_services']?>
                 </h1>
             </div>
             <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-heading style-panel-head-main">
-                        <h4><i class="fa fa-fw fa-shopping-cart"></i> Продаж пиломатеріалів</h4>
+                        <h4><i class="fa fa-fw fa-shopping-cart"></i> <?=Page::$local_const['lumber_sales']?></h4>
                     </div>
                     <div class="panel-body">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
@@ -64,28 +64,7 @@
             <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-heading style-panel-head-main">
-                        <h4><i class="fa fa-fw fa-tree"></i> Фуговка</h4>
-                    </div>
-                    <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading style-panel-head-main">
-                        <h4><i class="fa fa-fw fa-fire"></i> Сушіння деревини</h4>
-                    </div>
-                    <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading style-panel-head-main">
-                        <h4><i class="fa fa-fw fa-check"></i> Термообробка</h4>
+                        <h4><i class="fa fa-fw fa-tree"></i> <?=Page::$local_const['']?></h4>
                     </div>
                     <div class="panel-body">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
@@ -96,7 +75,17 @@
             <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-heading style-panel-head-main">
-                        <h4><i class="fa fa-fw fa-truck"></i> Транспортування дерева</h4>
+                        <h4><i class="fa fa-fw fa-fire"></i> <?=Page::$local_const['wood_drying']?></h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading style-panel-head-main">
+                        <h4><i class="fa fa-fw fa-check"></i> <?=Page::$local_const['heat_treatment']?></h4>
                     </div>
                     <div class="panel-body">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
@@ -107,7 +96,18 @@
             <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-heading style-panel-head-main">
-                        <h4><i class="fa fa-fw fa-compass"></i> Швидке виконання!</h4>
+                        <h4><i class="fa fa-fw fa-truck"></i> <?=Page::$local_const['wood_transporting']?></h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading style-panel-head-main">
+                        <h4><i class="fa fa-fw fa-compass"></i> <?=Page::$local_const['fast_perfomance']?></h4>
                     </div>
                     <div class="panel-body">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
