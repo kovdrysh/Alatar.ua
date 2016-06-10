@@ -181,7 +181,7 @@ class Tables{
         }
         $this->result .= '<div class="cont" style="width: 960px; margin-left: auto; margin-right: auto;">
                             <H1 class="page-title">'.$text.' '.$this->caption.'</H1>
-                            <span id="delete-news-icon" title="Видалити сторінку"><input type="hidden" id="delete-href" value="/'.$this->table_name.'/delete/'.$page_code.'"><i class="fa fa-trash-o fa-2x"></i></span>
+                            <span id="delete-news-icon" title="Видалити сторінку"><input type="hidden" id="delete-href" value="/'.$this->table_name.'/delete/'.$page_code.'"><i class="fa fa-trash-o fa-2x" id="delete-icon"></i></span>
                             <form action="/'.$action.$page_code.'" method="post">
                             <div class="form-div"><input type="hidden" name="_method" value="put">';
 
@@ -226,9 +226,9 @@ class Tables{
                 $com = true;
             }
         }
-        $val .= ' WHERE '.$this->fk.'=\''.self::$page_code.'\'';
+        echo $val .= ' WHERE '.$this->fk.'=\''.self::$page_code.'\'';
         Page::$db->SQL($val);
-        echo '<script>location.href = "/'.$this->table_name.'/browse"</script>';
+        //echo '<script>location.href = "/'.$this->table_name.'/browse"</script>';
     }
 
     public function execAdd(){
@@ -266,7 +266,7 @@ class Tables{
                 $com = true;
             }
         }
-        $sql .= $flds.') VALUES ('.$val.')';
+        echo $sql .= $flds.') VALUES ('.$val.')';
         $this->db->SQL($sql);
         echo '<script>location.href = "/'.$this->table_name.'/browse"</script>';
     }
@@ -554,11 +554,12 @@ class Field{
                 $this->element = '<textarea id="browse_'.$this->name.'" disabled title="'.$this->title.'">'.$value.'</textarea>';
                 break;
             case 'text':
-                $this->element = '<div class="browse-div-text" title="'.$this->title.'">'.$value.'</div>';
+                //$this->element = '<div class="browse-div-text" title="'.$this->title.'">'.$value.'</div>';
+                $this->element = '<span class="browse-div-text" title="'.$this->title.'">'.$value.'</span>';
                 break;
             case 'lookup':
                 //var_dump($this->lookupValue);
-                //echo $value;
+                //var_dump($this->lookupValue);
                 $this->element = '<div class="browse-div-text" title="'.$this->title.'">'.$this->lookupValue[$value][$this->lookupCaptionName].'</div>';
                 break;
             case 'int':
@@ -584,7 +585,7 @@ class Field{
                 $this->element = '<textarea class="ckeditor" name="'.$this->name.'" id="edit_'.$this->name.'" >'.$value.'</textarea>';
                 break;
             case 'text':
-                $this->element = '<input type="text" name="'.$this->name.'" class="edit-input" value="'.$value.'">';
+                $this->element = '<input type="text" name="'.$this->name.'" class="edit-input" value="'.htmlspecialchars($value).'">';
                 break;
             case 'int':
                 $this->element = '<input type="number" name="'.$this->name.'" class="edit-input" value="'.$value.'">';

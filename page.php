@@ -24,16 +24,12 @@ class Page{
 
     public function __construct($code){
         $this->view = $code;
-
         if(is_array($code)){
             $this->field = $code;
         }else {
             $this->code = $code;
-            // Light version of the page
-//            if($this->light)
-//                self::$db->SQL("SELECT code,caption,aliasOf FROM pages WHERE code = ?", $this->code);
-//            else
-            self::$db->SQL("SELECT * FROM pages WHERE code = ?", $this->code);
+            $sql = "SELECT * FROM pages".self::$languagePrefix." WHERE code = '".$this->code."'";
+            self::$db->SQL($sql);
             try {
                 $this->field = self::$db->nextRow();
             }
@@ -44,10 +40,7 @@ class Page{
         }
         $this->content = $this->field['content'];
         $this->caption = $this->field['caption'];
-        $this->parentCode = $this->field['parentCode'];
         $this->isContainer = $this->field['isContainer'];
-        $this->aliasOf = $this->field['aliasOf'];
-        $this->productCode = $this->field['productCode'];
         $this->title = $this->caption;
     }
 
@@ -58,42 +51,45 @@ class Page{
                     self::$db->SQL("SELECT * FROM map");
                     array_push($this->data1, self::$db->nextRow());
                 } elseif ($this->code === 'product') {
-                    self::$db->SQL("SELECT caption FROM menu ORDER BY id;");
+                    $sql = "SELECT caption FROM menu".self::$languagePrefix." ORDER BY id;";
+                    self::$db->SQL($sql);
                     while ($row = self::$db->nextRow()) {
                         array_push($this->data, $row);
                     }
                     foreach ($this->data as $row) {
                         $ar = array();
-                        self::$db->SQL("SELECT * FROM products WHERE menu_type = ? ORDER BY id", $row['caption']);
+                        echo $sql = "SELECT * FROM products".self::$languagePrefix." WHERE menu_type = '". $row['caption']."' ORDER BY id";
+                        self::$db->SQL($sql);
                         while ($row1 = self::$db->nextRow()) {
                             array_push($ar, $row1);
                         }
                         array_push($this->products, $ar);
                     }
                 } elseif ($this->code === 'vacancy') {
-                    self::$db->SQL("SELECT * FROM vacancies");
+                    $sql = "SELECT * FROM vacancies".self::$languagePrefix;
+                    self::$db->SQL($sql);
                     while ($row = self::$db->nextRow())
                         array_push($this->data, $row);
-                } elseif ($this->code === 'add-product') {
+                }/* elseif ($this->code === 'add-product') {
 
                     self::$db->SQL("SELECT type FROM productsTypes");
                     while ($row = self::$db->nextRow())
                         array_push($this->product_types, $row['type']);
-                } elseif ($this->code === 'orders') {
+                } */elseif ($this->code === 'orders') {
                     self::$db->SQL("SELECT * FROM orders");
                     while ($row = self::$db->nextRow())
                         array_push($this->data, $row);
-                } elseif ($this->code === 'product-change') {
+                /*} elseif ($this->code === 'product-change') {
                     if (isset($_GET['product'])) {
                         self::$db->SQL("SELECT * FROM products WHERE code=?", $_GET['product']);
                         array_push($this->data, self::$db->nextRow());
                         self::$db->SQL("SELECT type FROM productsTypes");
                         while ($row = self::$db->nextRow())
                             array_push($this->product_types, $row['type']);
-                    }
+                    }*/
                 }
             } else {
-                $sql = "SELECT * FROM products where code = '" . $this->code . "'";
+                $sql = "SELECT * FROM products".self::$languagePrefix." where code = '" . $this->code . "'";
                 self::$db->SQL($sql);
                 $pr = self::$db->nextRow();
                 if (!$pr) {
@@ -110,7 +106,6 @@ class Page{
                 }
             }
         }
-
         $this->filename = 'views/'.$this->view.'_view.php';
     }
 

@@ -25,6 +25,7 @@ if(!IN_ADMIN) {
 <style>
 .admin-view-table td:nth-child(3) .browse-div-text{
     line-height: 3.5em;
+    word-break: normal;
 }
 
 .admin-view-table tr:not(:first-of-type){

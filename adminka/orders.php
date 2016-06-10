@@ -12,7 +12,7 @@ include_once '/adminka/iDataSet.php';
 $table = new Tables('orders', 'Замовлення', 'id', 'date', Page::$db, 'Таблиця замовлень');
 $table->addField('id', 'int', 'ID', true, false, true, false);
 $table->addField('name', 'text', 'Ім’я замовника', false, true, true, false);
-$table->addField('telNumber', 'int', 'Номер телефону', false, true, true, false);
+$table->addField('telNumber', 'text', 'Номер телефону', false, true, true, false);
 $table->addField('email', 'text', 'Електронна пошта', false, true, true, false);
 $table->addField('info', 'varchar', 'Інформація', false, true, true, false);
 $table->addField('date', 'datetime', 'Час замовлення', false, true, true, false);

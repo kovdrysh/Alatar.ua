@@ -24,7 +24,8 @@
         padding: 10px 0;
     }
     .admin-view-table td .browse-div-text{
-        line-height: 3.5em;
+        /*line-height: 3.5em;*/
+        word-break: normal;
     }
 
     .admin-view-table tr:not(:first-of-type){

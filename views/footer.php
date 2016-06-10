@@ -35,19 +35,19 @@
 <!-- Bootstrap Core JavaScript -->
 <script src="/script/bootstrap.min.js"></script>
 <!--<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>-->
-<script src="/script/add_product.js"></script>
-<script src="/script/left_menu.js"></script>
-<script src="/script/order.js"></script>
-<script src="/script/enterAdmin.js"></script>
-<script src="/script/map_change.js"></script>
-<script src="/script/contacts_change.js"></script>
-<script src="/script/delivery_change.js"></script>
-<script src="/script/vacancy_change.js"></script>
-<script src="/script/order_success.js"></script>
-<script src="/adminka/script/search.js"></script>
-<script src="/adminka/script/admin_fw_src.js"></script>
+<script type="text/javascript" src="/script/add_product.js"></script>
+<script type="text/javascript" src="/script/left_menu.js"></script>
+<script type="text/javascript" src="/script/order.js"></script>
+<script type="text/javascript" src="/script/enterAdmin.js"></script>
+<script type="text/javascript" src="/script/map_change.js"></script>
+<script type="text/javascript" src="/script/contacts_change.js"></script>
+<script type="text/javascript" src="/script/delivery_change.js"></script>
+<script type="text/javascript" src="/script/vacancy_change.js"></script>
+<script type="text/javascript" src="/script/order_success.js"></script>
+<script type="text/javascript" src="/adminka/script/search.js"></script>
+<script type="text/javascript" src="/adminka/script/admin_fw_src.js"></script>
 <script type="text/javascript" src="/ckeditor/ckeditor.js"></script>
-<script src="/script/bootstrap.min.js"></script>
+<script type="text/javascript" src="/script/bootstrap.min.js"></script>
 <script>
     $('.carousel').carousel({
         interval: 5000 //changes the speed
