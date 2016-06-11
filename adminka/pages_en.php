@@ -14,11 +14,7 @@ $table->addField('code', 'text', 'Код', false, false, true, false);
 $table->addField('caption', 'text', 'Назва', false, true, true, false);
 $table->addField('content', 'varchar', 'Зміст', false, true, false, false);
 $table->addField('isContainer', 'boolean', 'Контейнер', false, true, false, false);
-
-//$subTable = new SubTable($table, 'page_concept', 'Поняття сторінки', 'id', 'page_code', Page::$db);
-//$subTable->addField('id','int','ID',true,false,true);
-//$subTable->addField('page_code','text','Сторінка',false,false,true);
-//$subTable->addField('concept','text','Поняття',false,true,true);
+$table_name = 'pages_en';
 $action = $table->parseUrl();
 
 $table_view = $table->handle();

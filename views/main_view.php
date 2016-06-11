@@ -118,5 +118,7 @@
         </div>
 
         <style>
-
+            #myCarousel{
+                margin-top: 10px;
+            }
         </style>

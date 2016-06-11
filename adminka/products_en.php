@@ -17,9 +17,9 @@ $table->addField('measure', 'text', 'Розмірність', false, true, true,
 $table->addField('price', 'text', 'Ціна', false, true, true, false);
 $table->addField('info', 'varchar', 'Інформація', false, true, true, false);
 $table->addField('image', 'image', 'Зображення', false, true, false, false);
-
+$table_name = 'products_en';
 $action = $table->parseUrl();
 
 $table_view = $table->handle();
-include '/views/pages_view.php';
+include '/views/products_view.php';
 include '/views/footer.php';
