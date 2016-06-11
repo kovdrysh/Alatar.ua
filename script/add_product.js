@@ -6,7 +6,7 @@ $(document).ready(function(){
     /*if($('body:first-line').text() == '1'){
         alert('1');
     }*/
-
+    var files;
     $('#image').change(function(){
         if (this.value.lastIndexOf('\\')){
             var i = this.value.lastIndexOf('\\')+1;
@@ -17,6 +17,29 @@ $(document).ready(function(){
         var filename = this.value.slice(i);
         var upload = document.getElementById('fileformlabel');
         upload.innerHTML = filename;
+        var upload2 = document.getElementById('hidden-image');
+        upload2.value = filename;
+        files = this.files;
+    });
+
+
+    $('.form-div').on('click', '#exec', function(){
+
+        var data = new FormData;
+        $.each(files, function(key, value){
+            data.append('image', value);
+        });
+        $.ajax({
+            url:'/fileUpload.php',
+            type:'post',
+            contentType: false,
+            processData: false,
+            data: data,
+            success:function(output){
+                alert(output);
+            }
+        });
+
     });
 
     $('#add-products-button').click(function(event){

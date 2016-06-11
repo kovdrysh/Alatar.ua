@@ -11,7 +11,7 @@
     <div class="page">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Місце розташування
+            <h1 class="page-header"><?=Page::$local_const['our_location']?>
                 
             </h1>
         </div>
@@ -27,11 +27,11 @@
         </div>
         <!-- Contact Details Column -->
         <div class="col-md-5">
-            <h3>Контакти</h3>
-                <p><i class="fa fa-home"></i> Україна, Київ, вул. Пухівська 1а</p>
+            <h3><?=Page::$local_const['contacts']?></h3>
+                <p><i class="fa fa-home"></i> <?=Page::$local_const['adress']?></p>
                 <p><i class="fa fa-phone"></i> 093-238-32-62</p>
                 <p><i class="fa fa-envelope-o"></i> alatar@gmail.com</p>
-                <p><i class="fa fa-clock-o"></i> Понеділок - Субота: 9:00 - 18:00</p>
+                <p><i class="fa fa-clock-o"></i> <?=Page::$local_const['working_mode']?></p>
         </div>
     </div>
     <!-- /.row -->

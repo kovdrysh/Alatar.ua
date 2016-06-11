@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Июн 11 2016 г., 10:18
--- Версия сервера: 5.5.41-log
--- Версия PHP: 5.3.29
+-- Час створення: Чрв 11 2016 р., 18:18
+-- Версія сервера: 5.5.41-log
+-- Версія PHP: 5.3.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,31 +17,32 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- База данных: `AlatarDB`
+-- База даних: `AlatarDB`
 --
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `map`
+-- Структура таблиці `map`
 --
 
 CREATE TABLE IF NOT EXISTS `map` (
-  `id` int(11) NOT NULL,
-  `map_link` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `map_link` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
--- Дамп данных таблицы `map`
+-- Дамп даних таблиці `map`
 --
 
 INSERT INTO `map` (`id`, `map_link`) VALUES
-(0, 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2536.07429401412!2d30.655526715667317!3d50.53278888930967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4d0ce20231741%3A0xca69712404996798!2z0LLRg9C7LiDQn9GD0YXRltCy0YHRjNC60LAsIDHQkCwgMUEsINCa0LjRl9Cy!5e0!3m2!1sru!2sua!4v1451816899627');
+(1, 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2536.074294014141!2d30.655526715925653!3d50.53278888930928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4d0ce20231741%3A0xca69712404996798!2zMUEsINCy0YPQuy4g0J_Rg9GF0ZbQstGB0YzQutCwLCAx0JAsINCa0LjRl9Cy!5e0!3m2!1sru!2sua!4v1465644540733');
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `menu_en`
+-- Структура таблиці `menu_en`
 --
 
 CREATE TABLE IF NOT EXISTS `menu_en` (
@@ -49,19 +50,20 @@ CREATE TABLE IF NOT EXISTS `menu_en` (
   `caption` varchar(100) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `caption` (`caption`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
--- Дамп данных таблицы `menu_en`
+-- Дамп даних таблиці `menu_en`
 --
 
 INSERT INTO `menu_en` (`id`, `caption`) VALUES
+(2, 'Containers and packaging'),
 (1, 'Lumber an workpiece');
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `menu_ukr`
+-- Структура таблиці `menu_ukr`
 --
 
 CREATE TABLE IF NOT EXISTS `menu_ukr` (
@@ -72,7 +74,7 @@ CREATE TABLE IF NOT EXISTS `menu_ukr` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
--- Дамп данных таблицы `menu_ukr`
+-- Дамп даних таблиці `menu_ukr`
 --
 
 INSERT INTO `menu_ukr` (`id`, `caption`) VALUES
@@ -82,7 +84,7 @@ INSERT INTO `menu_ukr` (`id`, `caption`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `orders`
+-- Структура таблиці `orders`
 --
 
 CREATE TABLE IF NOT EXISTS `orders` (
@@ -97,7 +99,7 @@ CREATE TABLE IF NOT EXISTS `orders` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=17 ;
 
 --
--- Дамп данных таблицы `orders`
+-- Дамп даних таблиці `orders`
 --
 
 INSERT INTO `orders` (`id`, `name`, `telNumber`, `email`, `info`, `date`, `done`) VALUES
@@ -111,7 +113,7 @@ INSERT INTO `orders` (`id`, `name`, `telNumber`, `email`, `info`, `date`, `done`
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `pages_en`
+-- Структура таблиці `pages_en`
 --
 
 CREATE TABLE IF NOT EXISTS `pages_en` (
@@ -125,7 +127,7 @@ CREATE TABLE IF NOT EXISTS `pages_en` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
 
 --
--- Дамп данных таблицы `pages_en`
+-- Дамп даних таблиці `pages_en`
 --
 
 INSERT INTO `pages_en` (`id`, `code`, `caption`, `content`, `isContainer`) VALUES
@@ -143,7 +145,7 @@ INSERT INTO `pages_en` (`id`, `code`, `caption`, `content`, `isContainer`) VALUE
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `pages_ukr`
+-- Структура таблиці `pages_ukr`
 --
 
 CREATE TABLE IF NOT EXISTS `pages_ukr` (
@@ -157,7 +159,7 @@ CREATE TABLE IF NOT EXISTS `pages_ukr` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=18 ;
 
 --
--- Дамп данных таблицы `pages_ukr`
+-- Дамп даних таблиці `pages_ukr`
 --
 
 INSERT INTO `pages_ukr` (`id`, `code`, `caption`, `content`, `isContainer`) VALUES
@@ -175,7 +177,7 @@ INSERT INTO `pages_ukr` (`id`, `code`, `caption`, `content`, `isContainer`) VALU
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `products_en`
+-- Структура таблиці `products_en`
 --
 
 CREATE TABLE IF NOT EXISTS `products_en` (
@@ -189,19 +191,21 @@ CREATE TABLE IF NOT EXISTS `products_en` (
   PRIMARY KEY (`id`),
   KEY `caption` (`caption`),
   KEY `menu_type` (`menu_type`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
--- Дамп данных таблицы `products_en`
+-- Дамп даних таблиці `products_en`
 --
 
 INSERT INTO `products_en` (`id`, `caption`, `menu_type`, `measure`, `price`, `info`, `image`) VALUES
-(1, 'Brus', 'Lumber an workpiece', 'cub.m.', 100, NULL, 'brus.jpg');
+(1, 'Brus', 'Lumber an workpiece', 'cub.m.', 100, NULL, 'brus.jpg'),
+(2, 'Building board', 'Lumber an workpiece', 'cub.m.', 100, NULL, 'doska_svizhopyl.jpg'),
+(3, 'Cropped board', 'Lumber an workpiece', 'cub.m.', 100, NULL, 'doshka_obrizna.jpg');
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `products_ukr`
+-- Структура таблиці `products_ukr`
 --
 
 CREATE TABLE IF NOT EXISTS `products_ukr` (
@@ -218,7 +222,7 @@ CREATE TABLE IF NOT EXISTS `products_ukr` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=30 ;
 
 --
--- Дамп данных таблицы `products_ukr`
+-- Дамп даних таблиці `products_ukr`
 --
 
 INSERT INTO `products_ukr` (`id`, `caption`, `menu_type`, `measure`, `price`, `info`, `image`) VALUES
@@ -238,7 +242,7 @@ INSERT INTO `products_ukr` (`id`, `caption`, `menu_type`, `measure`, `price`, `i
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `vacancies_en`
+-- Структура таблиці `vacancies_en`
 --
 
 CREATE TABLE IF NOT EXISTS `vacancies_en` (
@@ -247,19 +251,20 @@ CREATE TABLE IF NOT EXISTS `vacancies_en` (
   `info` varchar(500) DEFAULT NULL,
   `image` text,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
--- Дамп данных таблицы `vacancies_en`
+-- Дамп даних таблиці `vacancies_en`
 --
 
 INSERT INTO `vacancies_en` (`id`, `caption`, `info`, `image`) VALUES
-(1, 'Сбивщик поддонов', 'Сбивка поддонов.', 'poddon.jpg');
+(1, 'Knocking of the pallets', '<p>Knocking the pallets.</p>', 'poddon.jpg'),
+(2, 'Driver', '<p>Driving the truck.</p>', 'our_transport.jpg');
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `vacancies_ukr`
+-- Структура таблиці `vacancies_ukr`
 --
 
 CREATE TABLE IF NOT EXISTS `vacancies_ukr` (
@@ -268,27 +273,28 @@ CREATE TABLE IF NOT EXISTS `vacancies_ukr` (
   `info` varchar(500) DEFAULT NULL,
   `image` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
--- Дамп данных таблицы `vacancies_ukr`
+-- Дамп даних таблиці `vacancies_ukr`
 --
 
 INSERT INTO `vacancies_ukr` (`id`, `caption`, `info`, `image`) VALUES
-(1, 'Сбивщик поддонов', 'Сбивка поддонов.', 'poddon.jpg');
+(1, 'Сбивщик поддонов', 'Сбивка поддонов.', 'poddon.jpg'),
+(2, 'Водій', '<p>Водити грузову машину</p>\r\n', 'our_transport.jpg');
 
 --
--- Ограничения внешнего ключа сохраненных таблиц
+-- Обмеження зовнішнього ключа збережених таблиць
 --
 
 --
--- Ограничения внешнего ключа таблицы `products_en`
+-- Обмеження зовнішнього ключа таблиці `products_en`
 --
 ALTER TABLE `products_en`
   ADD CONSTRAINT `products_en_ibfk_1` FOREIGN KEY (`menu_type`) REFERENCES `menu_en` (`caption`);
 
 --
--- Ограничения внешнего ключа таблицы `products_ukr`
+-- Обмеження зовнішнього ключа таблиці `products_ukr`
 --
 ALTER TABLE `products_ukr`
   ADD CONSTRAINT `products_ukr_ibfk_1` FOREIGN KEY (`menu_type`) REFERENCES `menu_ukr` (`caption`);

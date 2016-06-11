@@ -3,7 +3,7 @@
    
     <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Вакансії</h1>
+                <h1 class="page-header"><?=Page::$local_const['vacancy']?></h1>
             </div>
     </div>
 

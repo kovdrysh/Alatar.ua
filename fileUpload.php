@@ -8,6 +8,7 @@
 $directory = 'images';
 if(isset($_FILES['image'])){
     $file_name = $_FILES['image']['name'];
+    var_dump($_FILES);
     $extention = pathinfo($file_name, PATHINFO_EXTENSION);
     if ($extention == "jpg" || $extention == "jpeg" || $extention == "gif" || $extention == "bmp" || $extention == "png")
     {
@@ -19,11 +20,11 @@ if(isset($_FILES['image'])){
             }
         }
         else{
-            echo 'Розмір файлу має бути меньше 3-х мегабайтів';
+            echo '22Розмір файлу має бути меньше 3-х мегабайтів';
         }
     }
     else{
-        echo 'Файл має бути зображенням';
+        echo '11Файл має бути зображенням';
     }
 }
 else echo 'Something wrong';

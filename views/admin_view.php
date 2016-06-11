@@ -15,12 +15,14 @@ if(!IN_ADMIN) {
         <ul class="admin-possibilities">
             <li><a href="/pages_ukr/browse">Сторінки сайту українською</a></li>
             <li><a href="/pages_en/browse">Сторінки сайту англійською</a></li>
-            <li><a href="/products_ukr/browse">Товари укр</a></li>
-            <li><a href="/products_en/browse">Товари english</a></li>
-            <li><a href="/menu_en/browse">Категорії товарів??</a></li>
-            <li><a href="/map_change">Змінити карту</a></li>
+            <li><a href="/products_ukr/browse">Товари українською</a></li>
+            <li><a href="/products_en/browse">Товари англійською</a></li>
+            <li><a href="/menu_ukr/browse">Категорії товарів українською</a></li>
+            <li><a href="/menu_en/browse">Категорії товарів англійською</a></li>
+            <li><a href="/map/browse">Змінити карту</a></li>
             <li><a href="/orders/browse">Переглянути замовлення</a></li>
-            <li><a href="/vacancy-change">Змінити інформацію щодо вакансій</a></li>
+            <li><a href="/vacancies_ukr/browse">Вакансії українською</a></li>
+            <li><a href="/vacancies_en/browse">Вакансії англійською</a></li>
         </ul>
 
 <style>

@@ -6,27 +6,17 @@ if(!IN_ADMIN) {
 ?>
 <div class="container" style="margin-top: 40px;">
     <div class="page">
-        <div id = "for-buttons">
-                <button type="button" class="btn btn-primary" onclick="createFormForNewVacancy()">Додати нову інформацію</button>
-                <button type="button" class="btn btn-primary" onclick="getVacanciesFromDB()">Редагувати вже існуюче</button>
+        <div class="cont admin-browse-view" style="width: 80%; margin-left: auto; margin-right: auto;">
+            <?if($action == 'browse'){?>
+                <H2>Перегляд вакансій</H2>
+                <span id="add-news-icon" title="Додати вакансію"> <a href="/<?=$table_name?>/add"><i class="fa fa-plus fa-lg"></i> <H4>Додати нову вакансію</H4></a></span>
+            <?}?>
+            <div class="admin-view-tabel-div">
+                <?=$table_view?>
             </div>
-
-            <div class="back-to-menu">
-            <a href = "/admin"><button type="button" class="btn btn-success">Повернутися до меню</button></a>
         </div>
 
-        <style>
+<style>
 
-#for-buttons{
-    margin-bottom: 20px;
-}
-input{
-    margin-bottom: 20px;
-}
-
-.back-to-menu{
-    margin-top: 20px;
-    text-align: right;
-}
 
 </style>

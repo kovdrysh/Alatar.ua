@@ -60,9 +60,11 @@ class Tables{
                         return '';
                         break;
                     case 'GET':
+                        //echo self::$page_code;
                         if (self::$page_code) {
                             return $this->displayEdit(self::$page_code);
-                        } else {
+                        }
+                        else {
                             return '<div class="cont admin-browse-view" style="width: 960px; margin-left: auto; margin-right: auto;"><H1>404 Not Found(</H1></div>';
                         }
                 }
@@ -195,11 +197,12 @@ class Tables{
             }
 
         }
-        $this->result .= '<input type="submit" value="'.$text.'"></div></form></div>';
+        $this->result .= '<input id="exec" type="submit" value="'.$text.'"></div></form></div>';
         return $this->result;
     }
 
     public function execEdit(){
+        var_dump($_POST);
         $com = false;
         $val = 'UPDATE '.$this->table_name.' SET ';
         foreach($this->fields as $field){
@@ -221,14 +224,14 @@ class Tables{
                 if ($_POST[$field->name] === '') {
                     $val .= 'NULL';
                 } else {
-                    $val .= '\''.htmlspecialchars($_POST[$field->name]).'\'';
+                    $val .= '\''./*htmlspecialchars*/$_POST[$field->name].'\'';
                 }
                 $com = true;
             }
         }
-        echo $val .= ' WHERE '.$this->fk.'=\''.self::$page_code.'\'';
+        $val .= ' WHERE '.$this->fk.'=\''.self::$page_code.'\'';
         Page::$db->SQL($val);
-        //echo '<script>location.href = "/'.$this->table_name.'/browse"</script>';
+        echo '<script>location.href = "/'.$this->table_name.'/browse"</script>';
     }
 
     public function execAdd(){
@@ -261,12 +264,12 @@ class Tables{
                 if ($_POST[$field->name] === '') {
                     $val .= 'NULL';
                 } else {
-                    $val .= '\''.htmlspecialchars($_POST[$field->name]).'\'';
+                    $val .= '\''./*htmlspecialchars*/$_POST[$field->name].'\'';
                 }
                 $com = true;
             }
         }
-        echo $sql .= $flds.') VALUES ('.$val.')';
+        $sql .= $flds.') VALUES ('.$val.')';
         $this->db->SQL($sql);
         echo '<script>location.href = "/'.$this->table_name.'/browse"</script>';
     }
@@ -430,7 +433,7 @@ class SubTable extends Tables{
             }
 
         }
-        $this->result .= '<input type="submit" value="'.$text.'"></div></form></div>';
+        $this->result .= '<input id="exec" type="submit" value="'.$text.'"></div></form></div>';
         return $this->result;
     }
 
@@ -457,7 +460,7 @@ class SubTable extends Tables{
                 if ($_POST[$field->name] === '') {
                     $val .= 'NULL';
                 } else {
-                    $val .= '\''.htmlspecialchars($_POST[$field->name]).'\'';
+                    $val .= '\''./*htmlspecialchars(*/$_POST[$field->name].'\'';
                 }
                 $com = true;
             }
@@ -501,7 +504,7 @@ class SubTable extends Tables{
                         $val .= $_GET['master'];
                     }
                     else
-                        $val .= '\''.htmlspecialchars($_POST[$field->name]).'\'';
+                        $val .= '\''./*htmlspecialchars*/$_POST[$field->name].'\'';
                 }
                 $com = true;
             }
@@ -551,7 +554,7 @@ class Field{
                 }
                 break;
             case 'varchar':
-                $this->element = '<textarea id="browse_'.$this->name.'" disabled title="'.$this->title.'">'.$value.'</textarea>';
+                $this->element = '<textarea id="browse_'.$this->name.'" disabled title="'.$this->title.'">'.strip_tags(html_entity_decode($value)).'</textarea>';
                 break;
             case 'text':
                 //$this->element = '<div class="browse-div-text" title="'.$this->title.'">'.$value.'</div>';
@@ -603,14 +606,14 @@ class Field{
                 $this->element.='</select>';
                 break;
             case 'image':
-                $this->element = '<form action="/fileUpload.php" method="post" id="upload-form" enctype="multipart/form-data">
-                                    <div class="fileform">
-                                        <input type="hidden" id="hidden-image" name="'.$this->name.'" value="'.$value.'">
-                                        <div id="fileformlabel">'.$value.'</div>
-                                        <div class="selectbutton" >Обзор</div>
-                                        <input type="file" class="add add-text form-control" accept="image/*" name="" id="image">
-                                    </div>
-                                </form>';
+                //<form action="/fileUpload.php" method="post" id="upload-form" enctype="multipart/form-data">
+                $this->element = '
+                                        <div class="fileform">
+                                            <input type="hidden" id="hidden-image" name="'.$this->name.'" value="'.$value.'">
+                                            <div id="fileformlabel">'.$value.'</div>
+                                            <div class="selectbutton" >Обзор</div>
+                                            <input type="file" class="add add-text form-control" accept="image/*" name="image" id="image">
+                                        </div>';
                 break;
         }
         return $this->element;

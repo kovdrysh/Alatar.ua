@@ -23,30 +23,5 @@ if(!IN_ADMIN) {
         </div>
 
 <style>
-.admin-view-table td:nth-child(3) .browse-div-text{
-    line-height: 3.5em;
-    word-break: normal;
-}
 
-.admin-view-table tr:not(:first-of-type){
-    height: 4.5em;
-}
-
-.admin-view-table td:last-of-type .browse-div-text{
-    line-height: 14pt;
-    vertical-align: middle;
-    max-width: 130px;
-}
-.admin-view-table td{
-    padding: 0px 15px;
-}
-#add-news-icon{
-
-}
-.admin-view-tabel-div{
-    margin-top: 20px;
-}
-.admin-browse-view h4{
-    display: inline-block;
-}
 </style>
