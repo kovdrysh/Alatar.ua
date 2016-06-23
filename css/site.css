@@ -196,3 +196,27 @@ a:hover{
         display: none;
     }
 }
+
+
+.navbar-brand{
+    padding: 0px;
+    line-height: normal;
+}
+@media all and (min-width: 930px) {
+    .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+        margin-left: 0px;
+    }
+}
+#brand-title{
+    display: inline-block;
+    font-size: 50px;
+}
+#brand-title-div:after{
+    content: '';
+    clear: both;
+    display: table;
+}
+.navbar-brand > img{
+    display: inline-block;
+    vertical-align: top;
+}

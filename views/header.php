@@ -16,17 +16,20 @@
     <meta name="author" content="">
 
     <title><?=$title?></title>
-
+    <!--<link rel="shortcut icon" href="/images/copy2_converted.ico" type="image/x-icon">-->
+    <link rel="shortcut icon" href="http://alatar.ua/images/favicon.ico">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
     <!-- Bootstrap Core CSS -->
     <link href="/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="/css/modern-business.css" rel="stylesheet">
     <link href="/css/login.css" rel="stylesheet">
-
+    <?if(IN_ADMIN){?>
     <link rel="stylesheet" href="/adminka/css/admin.css">
     <link rel="stylesheet" href="/adminka/css/jquery-ui-timepicker-addon.css">
     <link rel="stylesheet" href="/adminka/css/jquery-ui.css">
+    <?}?>
     <!-- Custom Fonts -->
 	<link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
 	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
@@ -61,8 +64,12 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
-            </button>            
-            <a class="navbar-brand" href="/"><?=Page::$local_const['Alatar']?></a>
+            </button>
+            <div id="brand-title-div">
+                <a class="navbar-brand" href="/"><img src="/images/alatar2.png" style="height:50px">
+                    <div id="brand-title"> <?=Page::$local_const['Alatar']?></div>
+                </a>
+            </div>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

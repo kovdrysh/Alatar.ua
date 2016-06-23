@@ -8,8 +8,6 @@
 
 include "/auth.php";
 include '/ErrorHandler.php';
-//set_error_handler('/ErrorHandler::myErrorHandler');
-//register_shutdown_function('/ErrorHandler::fatalErrorHandler');
 
 if(isset($_GET['exit'])){
     if($_GET['exit'] == 1){
@@ -19,6 +17,8 @@ if(isset($_GET['exit'])){
     }
 }
 session_start();
+set_error_handler('\\ErrorHandler::myErrorHandler');
+register_shutdown_function('\\ErrorHandler::fatalErrorHandler');
 include '/Recordset.php';
 include '/page.php';
 Page::$db = new Recordset();

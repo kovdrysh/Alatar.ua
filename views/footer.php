@@ -44,11 +44,12 @@
 <script type="text/javascript" src="/script/delivery_change.js"></script>
 <script type="text/javascript" src="/script/vacancy_change.js"></script>
 <script type="text/javascript" src="/script/order_success.js"></script>
+<?if(IN_ADMIN){?>
 <script type="text/javascript" src="/adminka/script/jquery-ui.min.js"></script>
 <script type="text/javascript" src="/adminka/script/search.js"></script>
 <script type="text/javascript" src="/adminka/script/admin_fw_src.js"></script>
 <script type="text/javascript" src="/adminka/script/jquery-ui-timepicker-addon.js"></script>
-
+<?}?>
 
 <script type="text/javascript" src="/ckeditor/ckeditor.js"></script>
 <script type="text/javascript" src="/script/bootstrap.min.js"></script>
