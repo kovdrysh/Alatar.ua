@@ -17,7 +17,7 @@ $table->addField('email', 'text', 'Електронна пошта', false, true
 $table->addField('info', 'varchar', 'Інформація', false, true, true, false);
 $table->addField('date', 'datetime', 'Час замовлення', false, true, true, false);
 $table->addField('done', 'boolean', 'Статус виконання', false, true, true, 'image');
-
+$table_name = 'orders';
 $action = $table->parseUrl();
 $table_view = $table->handle();
 

@@ -30,10 +30,8 @@ class Page{
             $this->code = $code;
             $sql = "SELECT * FROM pages".self::$languagePrefix." WHERE code = '".$this->code."'";
             self::$db->SQL($sql);
-            try {
-                $this->field = self::$db->nextRow();
-            }
-            catch(Exception $e){
+            $this->field = self::$db->nextRow();
+            if(!$this->field){
                 $this->notFound = true;
                 $this->view = '404';
             }
@@ -58,7 +56,7 @@ class Page{
                     }
                     foreach ($this->data as $row) {
                         $ar = array();
-                        echo $sql = "SELECT * FROM products".self::$languagePrefix." WHERE menu_type = '". $row['caption']."' ORDER BY id";
+                        $sql = "SELECT * FROM products".self::$languagePrefix." WHERE menu_type = '". $row['caption']."' ORDER BY id";
                         self::$db->SQL($sql);
                         while ($row1 = self::$db->nextRow()) {
                             array_push($ar, $row1);
@@ -70,23 +68,11 @@ class Page{
                     self::$db->SQL($sql);
                     while ($row = self::$db->nextRow())
                         array_push($this->data, $row);
-                }/* elseif ($this->code === 'add-product') {
-
-                    self::$db->SQL("SELECT type FROM productsTypes");
-                    while ($row = self::$db->nextRow())
-                        array_push($this->product_types, $row['type']);
-                } */elseif ($this->code === 'orders') {
+                } elseif ($this->code === 'orders') {
                     self::$db->SQL("SELECT * FROM orders");
                     while ($row = self::$db->nextRow())
                         array_push($this->data, $row);
-                /*} elseif ($this->code === 'product-change') {
-                    if (isset($_GET['product'])) {
-                        self::$db->SQL("SELECT * FROM products WHERE code=?", $_GET['product']);
-                        array_push($this->data, self::$db->nextRow());
-                        self::$db->SQL("SELECT type FROM productsTypes");
-                        while ($row = self::$db->nextRow())
-                            array_push($this->product_types, $row['type']);
-                    }*/
+
                 }
             } else {
                 $sql = "SELECT * FROM products".self::$languagePrefix." where code = '" . $this->code . "'";

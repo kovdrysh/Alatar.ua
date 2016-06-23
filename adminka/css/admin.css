@@ -217,3 +217,16 @@ form input[type="submit"]{
 .admin-browse-view h4{
     display: inline-block;
 }
+
+#return-to-admin-page{
+    float: right;
+}
+.admin-browse-div {
+    display: table;
+    min-height: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.admin-browse-view h4{
+    margin-top: 0px;
+}

@@ -1,7 +1,8 @@
 <?php
 if(!IN_ADMIN) {
-    echo '<script>window.location.href = "/404"</script>';
-    return;
+    //echo '<script>window.location.href = "/404"</script>';
+    include '/views/404_view.php';
+    exit;
 }
 ?>
 <div class="container" style="margin-top: 40px;">
@@ -37,7 +38,7 @@ if(!IN_ADMIN) {
         color: #464646;
     }
     .admin-possibilities a:hover{
-        color:#92A2AF;
+        font-weight: bold;
     }
     .admin-possibilities li{
         padding: 7px 20px;
@@ -59,6 +60,8 @@ if(!IN_ADMIN) {
     .admin-possibilities li:nth-child(5){border-color: #00CCFF;/*#493224;*/}
     .admin-possibilities li:nth-child(6){border-color: #0B7EFF;}
     .admin-possibilities li:nth-child(7){border-color: #7154FF;}
+    .admin-possibilities li:nth-child(8){border-color: #fcba30;}
+    .admin-possibilities li:nth-child(9){border-color: #FFFB00;}
     .admin-possibilities li:hover {
         border-left: 10px solid transparent;
     }
@@ -82,6 +85,15 @@ if(!IN_ADMIN) {
     }
     .admin-possibilities li:nth-child(7):hover {
         border-right: 10px solid #7154FF;
+    }
+    .admin-possibilities li:nth-child(8):hover {
+        border-right: 10px solid #fcba30;
+    }
+    .admin-possibilities li:nth-child(9):hover {
+        border-right: 10px solid #FFFB00;
+    }
+    .admin-possibilities li:nth-child(10):hover {
+        border-right: 10px solid #f05d22;
     }
     .admin-div h2{
         margin-top: -5px;
