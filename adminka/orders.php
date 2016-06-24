@@ -6,8 +6,8 @@
  * Time: 11:32
  */
 
-include '/views/header.php';
-include_once '/adminka/iDataSet.php';
+include 'views/header.php';
+include_once 'adminka/iDataSet.php';
 
 $table = new Tables('orders', 'Замовлення', 'id', 'date', Page::$db, 'Таблиця замовлень');
 $table->addField('id', 'int', 'ID', true, false, true, false);
@@ -21,5 +21,5 @@ $table_name = 'orders';
 $action = $table->parseUrl();
 $table_view = $table->handle();
 
-include '/views/orders_view.php';
-include '/views/footer.php';
+include 'views/orders_view.php';
+include 'views/footer.php';

@@ -6,8 +6,8 @@
  * Time: 17:00
  */
 
-include '/views/header.php';
-include_once('/adminka/iDataSet.php');
+include 'views/header.php';
+include_once('adminka/iDataSet.php');
 $table = new Tables('pages_ukr', 'Сторінки', 'code', 'id', Page::$db, 'Таблиця: Сторінки');
 $table->addField('id', 'int', 'ID', true, false, true, false);
 $table->addField('code', 'text', 'Код', false, false, true, false);
@@ -18,5 +18,5 @@ $table_name = 'pages_ukr';
 $action = $table->parseUrl();
 
 $table_view = $table->handle();
-include '/views/pages_view.php';
-include '/views/footer.php';
+include 'views/pages_view.php';
+include 'views/footer.php';

@@ -6,8 +6,8 @@
  * Time: 14:26
  */
 
-include '/views/header.php';
-include_once('/adminka/iDataSet.php');
+include 'views/header.php';
+include_once('adminka/iDataSet.php');
 $table = new Tables('products_ukr', 'Товари', 'id', 'id', Page::$db, 'Таблиця: Товари');
 $table->addField('id', 'int', 'ID', true, false, true, false);
 $table->addField('caption', 'text', 'Назва', false, true, true, false);
@@ -21,5 +21,5 @@ $table_name = 'products_ukr';
 $action = $table->parseUrl();
 
 $table_view = $table->handle();
-include '/views/products_view.php';
-include '/views/footer.php';
+include 'views/products_view.php';
+include 'views/footer.php';

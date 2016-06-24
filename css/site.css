@@ -220,3 +220,11 @@ a:hover{
     display: inline-block;
     vertical-align: top;
 }
+
+.footer-container{
+    background-color: #2d0303;
+    color:#ecec9b;
+}
+.footer-container .container{
+    height: auto;
+}

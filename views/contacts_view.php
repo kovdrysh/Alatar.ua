@@ -21,12 +21,12 @@
     <!-- Content Row -->
     <div class="row">
         <!-- Map Column -->
-        <div class="col-md-7">
+        <div class="col-md-8">
             <!-- Embedded Google Map -->
-            <iframe width="100%" height="400px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="<?=$this->data1[0]['map_link']?>"></iframe>
+            <iframe width="100%" height="500px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="<?=$this->data1[0]['map_link']?>"></iframe>
         </div>
         <!-- Contact Details Column -->
-        <div class="col-md-5">
+        <div class="col-md-4">
             <h3><?=Page::$local_const['contacts']?></h3>
                 <p><i class="fa fa-home"></i> <?=Page::$local_const['adress']?></p>
                 <p><i class="fa fa-phone"></i> 093-238-32-62</p>

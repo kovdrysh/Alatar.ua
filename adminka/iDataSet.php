@@ -5,7 +5,7 @@
  * Date: 03.03.2016
  * Time: 13:29
  */
-include_once '/Recordset.php';
+include_once 'Recordset.php';
 
 class Tables{
     public $table_name, $fields = array(), $caption, $order;

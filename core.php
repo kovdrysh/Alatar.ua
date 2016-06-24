@@ -6,8 +6,8 @@
  * Time: 11:35
  */
 
-include "/auth.php";
-include '/ErrorHandler.php';
+include "auth.php";
+include 'ErrorHandler.php';
 
 if(isset($_GET['exit'])){
     if($_GET['exit'] == 1){
@@ -19,10 +19,12 @@ if(isset($_GET['exit'])){
 session_start();
 set_error_handler('\\ErrorHandler::myErrorHandler');
 register_shutdown_function('\\ErrorHandler::fatalErrorHandler');
-include '/Recordset.php';
-include '/page.php';
+include 'Recordset.php';
+include 'page.php';
 Page::$db = new Recordset();
 Page::$db->connect(Page::$host, Page::$dbname, Page::$user, Page::$pass);
+Page::$db->SQL("SET NAMES 'utf8' COLLATE 'utf8_general_ci'");
+Page::$db->SQL("SET CHARACTER SET 'utf8'");
 
 if(isset($_SESSION['lang'])){
     Page::$languagePrefix = $_SESSION['lang'];
@@ -32,14 +34,14 @@ else{
 }
 if(isset($_SESSION['lang'])){
     if($_SESSION['lang'] == '_en'){
-        Page::$local_const = parse_ini_file('/en.ini', true);
+        Page::$local_const = parse_ini_file('en.ini', true);
     }
     elseif($_SESSION['lang'] == '_ukr'){
-        Page::$local_const = parse_ini_file('/ukr.ini', true);
+        Page::$local_const = parse_ini_file('ukr.ini', true);
     }
 }
 else{
-    Page::$local_const = parse_ini_file('/ukr.ini', true);
+    Page::$local_const = parse_ini_file('ukr.ini', true);
 }
 
 
@@ -50,18 +52,19 @@ array_shift($routes);
 if($routes[0]==='admin' || file_exists('adminka/'.$routes[0].'.php')){
     if(IN_ADMIN){
         if($routes[0]=='admin'){
-            include '/views/header.php';
-            include '/views/admin_view.php';
-            include '/views/footer.php';
+            $title = "Сторінка адміністратора";
+            include 'views/header.php';
+            include 'views/admin_view.php';
+            include 'views/footer.php';
         }
         else{
-            include '/adminka/'.$routes[0].'.php';
+            include 'adminka/'.$routes[0].'.php';
         }
     }
     else{
-        include '/views/header.php';
-        include '/views/404_view.php';
-        include '/views/footer.php';
+        include 'views/header.php';
+        include 'views/404_view.php';
+        include 'views/footer.php';
     }
 }
 else {
@@ -75,7 +78,7 @@ else {
 
     $title = $page->getTitle();
 
-    include '/views/header.php';
+    include 'views/header.php';
     $page->publish();
-    include '/views/footer.php';
+    include 'views/footer.php';
 }

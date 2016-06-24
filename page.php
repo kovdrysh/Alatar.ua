@@ -100,7 +100,7 @@ class Page{
             include $this->filename;
         }
         else{
-            include '/views/404_view.php';
+            include 'views/404_view.php';
         }
     }
 

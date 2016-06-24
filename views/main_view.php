@@ -43,7 +43,7 @@
         <span class="icon-next"></span>
     </a>
 </header>
-<div class="container" style="margin-top: 40px;position: relative; display: table; height: 100%;">
+<div class="container" style="margin-top: 40px;position: relative; display: table; height: auto;margin-bottom: 40px">
     <div class="page">
         <div class="row">
             <div class="col-lg-12">
@@ -64,7 +64,7 @@
             <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-heading style-panel-head-main">
-                        <h4><i class="fa fa-fw fa-tree"></i> <?=Page::$local_const['']?></h4>
+                        <h4><i class="fa fa-fw fa-tree"></i> <?=Page::$local_const['jointer']?></h4>
                     </div>
                     <div class="panel-body">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>

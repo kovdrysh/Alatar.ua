@@ -1,35 +1,38 @@
 <?
 ?>
 </div>
-<footer id = "footer" style="margin-top: 40px;">
-    <div class="row">
-        <div class="col-lg-12 col-sm-12">
-            <div class="col-lg-3 col-sm-3 col-xs-6">
-            	<h4><?=Page::$local_const['contacts']?></h4>
-            	<p><i class="fa fa-home"></i> <?=Page::$local_const['adress']?></p>
-                <p><i class="fa fa-phone"></i> 093-238-32-62</p>
-                <p><i class="fa fa-envelope-o"></i> alatar@gmail.com</p>
-            	         
-            </div>
-            <div class="col-lg-3 col-sm-3 col-xs-6 ">
-            	<h4><?=Page::$local_const['delivery']?></h4>
-            	    <p><i class="fa fa-car"></i> <?=Page::$local_const['self_delivery']?></p>
-                    <p><i class="fa fa-truck"></i> <?=Page::$local_const['our_transport']?></p>
-            </div>
-            <div class="col-lg-3 col-sm-3 col-xs-6 my-hide">
-            	<h4><?=Page::$local_const['payment']?></h4>
-            	    <p><i class="fa fa-money"></i> <?=Page::$local_const['cash_payment']?></p>
-                    <p><i class="fa fa-bank"></i> <?=Page::$local_const['bank_payment']?></p>
-            </div>
-            <div class = "col-lg-3 col-sm-3 col-xs-12 ">
-            	<h4 class = "main-text"><?=Page::$local_const['Alatar_footer']?></h4>
-            </div>
-        </div>
-    </div>
-</footer>
-
-
 </div>
+<div class="footer-container">
+    <div class="container">
+        <footer id = "footer" style="margin-top: 20px;">
+            <div class="row">
+                <div class="col-lg-12 col-sm-12">
+                    <div class="col-lg-3 col-sm-3 col-xs-6">
+                        <h4><?=Page::$local_const['contacts']?></h4>
+                        <p><i class="fa fa-home"></i> <?=Page::$local_const['adress']?></p>
+                        <p><i class="fa fa-phone"></i> 093-238-32-62</p>
+                        <p><i class="fa fa-envelope-o"></i> alatar@gmail.com</p>
+
+                    </div>
+                    <div class="col-lg-3 col-sm-3 col-xs-6 ">
+                        <h4><?=Page::$local_const['delivery']?></h4>
+                            <p><i class="fa fa-car"></i> <?=Page::$local_const['self_delivery']?></p>
+                            <p><i class="fa fa-truck"></i> <?=Page::$local_const['our_transport']?></p>
+                    </div>
+                    <div class="col-lg-3 col-sm-3 col-xs-6 my-hide">
+                        <h4><?=Page::$local_const['payment']?></h4>
+                            <p><i class="fa fa-money"></i> <?=Page::$local_const['cash_payment']?></p>
+                            <p><i class="fa fa-bank"></i> <?=Page::$local_const['bank_payment']?></p>
+                    </div>
+                    <div class = "col-lg-3 col-sm-3 col-xs-12 ">
+                        <h4 class = "main-text"><?=Page::$local_const['Alatar_footer']?></h4>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+
 <script src="/script/jquery.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
@@ -91,7 +94,7 @@ html {
 .container{
     position: relative;
     display: table;
-    height: 100%;
+    height: 85%;
 }
     .main-text{
         text-align: center;
