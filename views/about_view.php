@@ -9,9 +9,9 @@
 <div class="container" >
     <div class="page">
     <div class="row">
-        <div class="col-lg-12">
-            <h1 class="page-header">About
-                <small>Subheading</small>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <h1 class="page-header">Наша компанія
+
             </h1>
         </div>
     </div>
@@ -23,9 +23,10 @@
             <img class="img-responsive" src="http://placehold.it/750x450" alt="">
         </div>
         <div class="col-md-6">
-            <h2>About Modern Business</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed voluptate nihil eum consectetur similique? Consectetur, quod, incidunt, harum nisi dolores delectus reprehenderit voluptatem perferendis dicta dolorem non blanditiis ex fugiat.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, magni, aperiam vitae illum voluptatum aut sequi impedit non velit ab ea pariatur sint quidem corporis eveniet. Odit, temporibus reprehenderit dolorum!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, consequuntur, modi mollitia corporis ipsa voluptate corrupti eum ratione ex ea praesentium quibusdam? Aut, in eum facere corrupti necessitatibus perspiciatis quis?</p>
+            <h2>ТОВ "АЛАТАР"</h2>
+            <p>ТОВ "АЛАТАР" працює на ринку деревообробних матеріалів протягов 15 років.</p>
+            <p>У нашій компанії працює злагоджений колектив, члени якого мають гарні перспективи розвитку. Маємо досвід праці як на внутрішньому ринку, так і на зовнішньому. Нами було розроблено механізм контролю якості за виготовлення продукції.</p>
+            <p>Основа нашої діяльності - індивідуальний підхід до кожного замовника з урахуванням всіх особливостей технічного  стану продукції та доставки.</p>
+            <p>Наші замовники - компанії, що розташовані по всьому світу. Серед них OTIS, завод Євроформат та багато інших постійних клієнтів. Вдале місцерозташування надає нам можливість транспортувати нашу продукцію по всій Україні. </p>
         </div>
     </div>

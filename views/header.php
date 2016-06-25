@@ -87,7 +87,7 @@
                     <a href="/vacancy"><i class="fa fa-info"></i> <?=Page::$local_const['vacancy']?></a>
                 </li>
                 <li>
-                    <a href="/contacts"><i class="fa fa-info"></i> <?=Page::$local_const['contacts']?></a>
+                    <a href="/contacts"><i class="fa fa-phone"></i> <?=Page::$local_const['contacts']?></a>
                 </li>
                 <li>
                     <a href="/order"><i class="fa fa-envelope-o"></i> <?=Page::$local_const['order']?></a>
