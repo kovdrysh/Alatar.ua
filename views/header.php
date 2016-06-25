@@ -90,7 +90,7 @@
                     <a href="/contacts"><i class="fa fa-info"></i> <?=Page::$local_const['contacts']?></a>
                 </li>
                 <li>
-                    <a href="/order"><i class="fa fa-trash"></i> <?=Page::$local_const['order']?></a>
+                    <a href="/order"><i class="fa fa-envelope-o"></i> <?=Page::$local_const['order']?></a>
                 </li>
                 
                 

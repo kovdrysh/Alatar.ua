@@ -9,7 +9,7 @@ body{
 
 .header-style{
 	background-color: #330000;
-	color: #ffcccc;
+	color: #FDFDDA;
 	border-color: #330000;
 }
 .navbar-inverse .navbar-nav>li>a {
@@ -165,7 +165,7 @@ a:hover{
 }
 
 .header-tel-number>span>a{
-	color: #ffcccc;
+	color: #FDFDDA;
 }
 
 .navbar-brand{
