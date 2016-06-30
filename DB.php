@@ -9,6 +9,10 @@ class DB{
     private static $instance;
     private $dbh;
     public $connected;
+    private $host = "localhost";
+    private $dbname = "AlatarDB";
+    private $user = "root";
+    private $pass = "";
 
     private function __construct(){}
 
@@ -19,9 +23,9 @@ class DB{
         return self::$instance;
     }
 
-    public function connect($host, $dbname, $user, $pass){
+    public function connect(){
         try{
-            $this->dbh = new PDO("mysql:host=".$host.";dbname=".$dbname, $user, $pass);
+            $this->dbh = new PDO("mysql:host=".$this->host.";dbname=".$this->dbname, $this->user, $this->pass);
             $this->connected = true;
             return $this->dbh;
         } catch(PDOException $e){

@@ -5,7 +5,7 @@
  * Date: 23.06.2016
  * Time: 14:41
  */
-include_once '/IErrorHandler.php';
+include_once 'IErrorHandler.php';
 
 class ErrorHandler implements IErrorHandler{
     public static function myErrorHandler($code, $message, $file, $line){

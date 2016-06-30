@@ -21,7 +21,7 @@ session_start();
 include 'Recordset.php';
 include 'page.php';
 Page::$db = new Recordset();
-Page::$db->connect(Page::$host, Page::$dbname, Page::$user, Page::$pass);
+Page::$db->connect();
 Page::$db->SQL("SET NAMES 'utf8' COLLATE 'utf8_general_ci'");
 Page::$db->SQL("SET CHARACTER SET 'utf8'");
 

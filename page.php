@@ -8,10 +8,6 @@
 
 include_once 'Recordset.php';
 class Page{
-    public static $host = "localhost";
-    public static $dbname = "AlatarDB";
-    public static $user = "root";
-    public static $pass = "";
     public static $db;
     public static $languagePrefix, $local_const;
     private $code,$caption,$content,$parentCode,$isContainer,$aliasOf,$productCode;

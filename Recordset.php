@@ -11,12 +11,13 @@ class Recordset {
     private $sth;
     private $dbh;
 
+
     public function __construct(){
         $this->database = DB::get();
     }
 
-    public function connect($host, $dbname, $user, $pass){
-        $this->dbh = $this->database->connect($host, $dbname, $user, $pass);
+    public function connect(){
+        $this->dbh = $this->database->connect();
     }
 
     public function nextRow(){
