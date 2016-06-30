@@ -5,20 +5,19 @@
  * Date: 09.01.2016
  * Time: 11:35
  */
-
 include "auth.php";
-include 'ErrorHandler.php';
 
-if(isset($_GET['exit'])){
-    if($_GET['exit'] == 1){
-        $_SESSION = array();
-        session_destroy();
-        echo '<script type="text/javascript">window.location.href="/"</script>';
-    }
+//include 'ErrorHandler.php';
+$ex = explode('?', $_SERVER['REQUEST_URI']);
+if($ex[1] === 'exit=1'){
+    $_SESSION = array();
+    session_destroy();
+    echo '<script type="text/javascript">window.location.href="/"</script>';
 }
+
 session_start();
-set_error_handler('\\ErrorHandler::myErrorHandler');
-register_shutdown_function('\\ErrorHandler::fatalErrorHandler');
+//set_error_handler('\\ErrorHandler::myErrorHandler');
+//register_shutdown_function('\\ErrorHandler::fatalErrorHandler');
 include 'Recordset.php';
 include 'page.php';
 Page::$db = new Recordset();
@@ -32,16 +31,20 @@ if(isset($_SESSION['lang'])){
 else{
     Page::$languagePrefix = '_ukr';
 }
+$lang = '/';
 if(isset($_SESSION['lang'])){
     if($_SESSION['lang'] == '_en'){
         Page::$local_const = parse_ini_file('en.ini', true);
+        $lang = '/en';
     }
     elseif($_SESSION['lang'] == '_ukr'){
         Page::$local_const = parse_ini_file('ukr.ini', true);
+        $lang = '/';
     }
 }
 else{
     Page::$local_const = parse_ini_file('ukr.ini', true);
+    $lang = '/';
 }
 
 
@@ -69,9 +72,10 @@ if($routes[0]==='admin' || file_exists('adminka/'.$routes[0].'.php')){
 }
 else {
     if (!empty($routes[0])) {
-        $code = $routes[0];
+        if($routes[0]!='en') {
+            $code = $routes[0];
+        }
     }
-
     $page = new Page($code);
 
     $page->getContent();

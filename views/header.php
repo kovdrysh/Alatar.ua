@@ -67,7 +67,7 @@
             </button>
             <div id="brand-title-div">
                 <a class="navbar-brand" href="/"><img src="/images/alatar2.png" style="height:50px">
-                    <div id="brand-title"> <?=Page::$local_const['Alatar']?></div>
+                    <div id="brand-title"> <?=Page::$local_const['static']['Alatar']?></div>
                 </a>
             </div>
         </div>
@@ -75,22 +75,22 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="/"><i class = "fa fa-home"></i> <?=Page::$local_const['main_page']?></a>
+                    <a href="<?=$lang?>"><i class = "fa fa-home"></i> <?=Page::$local_const['static']['main_page']?></a>
                 </li>
                 <li>
-                    <a href="/about"><i class = "fa fa-tree"></i> <?=Page::$local_const['about']?></a>
+                    <a href="/about<?=$lang?>"><i class = "fa fa-tree"></i> <?=Page::$local_const['static']['about']?></a>
                 </li>
                 <li>
-                    <a href="/product"><i class = "fa fa-bars"></i> <?=Page::$local_const['products']?></a>
+                    <a href="/product<?=$lang?>"><i class = "fa fa-bars"></i> <?=Page::$local_const['static']['products']?></a>
                 </li>
                 <li>
-                    <a href="/vacancy"><i class="fa fa-info"></i> <?=Page::$local_const['vacancy']?></a>
+                    <a href="/vacancy<?=$lang?>"><i class="fa fa-info"></i> <?=Page::$local_const['static']['vacancy']?></a>
                 </li>
                 <li>
-                    <a href="/contacts"><i class="fa fa-info"></i> <?=Page::$local_const['contacts']?></a>
+                    <a href="/contacts<?=$lang?>"><i class="fa fa-info"></i> <?=Page::$local_const['static']['contacts']?></a>
                 </li>
                 <li>
-                    <a href="/order"><i class="fa fa-trash"></i> <?=Page::$local_const['order']?></a>
+                    <a href="/order<?=$lang?>"><i class="fa fa-trash"></i> <?=Page::$local_const['static']['order']?></a>
                 </li>
                 
                 

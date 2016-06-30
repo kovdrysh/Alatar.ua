@@ -11,7 +11,7 @@
     <div class="page">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header"><?=Page::$local_const['our_location']?>
+            <h1 class="page-header"><?=Page::$local_const['static']['our_location']?>
                 
             </h1>
         </div>
@@ -27,11 +27,11 @@
         </div>
         <!-- Contact Details Column -->
         <div class="col-md-4">
-            <h3><?=Page::$local_const['contacts']?></h3>
-                <p><i class="fa fa-home"></i> <?=Page::$local_const['adress']?></p>
+            <h3><?=Page::$local_const['static']['contacts']?></h3>
+                <p><i class="fa fa-home"></i> <?=Page::$local_const['static']['adress']?></p>
                 <p><i class="fa fa-phone"></i> 093-238-32-62</p>
                 <p><i class="fa fa-envelope-o"></i> alatar@gmail.com</p>
-                <p><i class="fa fa-clock-o"></i> <?=Page::$local_const['working_mode']?></p>
+                <p><i class="fa fa-clock-o"></i> <?=Page::$local_const['static']['working_mode']?></p>
         </div>
     </div>
     <!-- /.row -->
