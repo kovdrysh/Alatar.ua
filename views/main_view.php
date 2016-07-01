@@ -57,7 +57,7 @@
                         <h4><i class="fa fa-fw fa-shopping-cart"></i> <?=Page::$local_const['static']['lumber_sales']?></h4>
                     </div>
                     <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
+                        <p>Широкий вибір пиломатеріалів на продаж. Маємо індивідуальний підхід до кожного клієнта.</p>
                     </div>
                 </div>
             </div>
@@ -67,7 +67,7 @@
                         <h4><i class="fa fa-fw fa-tree"></i> <?=Page::$local_const['static']['jointer']?></h4>
                     </div>
                     <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
+                        <p>Процес зняття певного шару деревини для придання рівної, плоскої поверхні.</p>
 
                     </div>
                 </div>
@@ -78,7 +78,7 @@
                         <h4><i class="fa fa-fw fa-fire"></i> <?=Page::$local_const['static']['wood_drying']?></h4>
                     </div>
                     <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
+                        <p>Видалення вологи з деревини задля стійкості до загнивання.</p>
                     </div>
                 </div>
             </div>
@@ -88,7 +88,7 @@
                         <h4><i class="fa fa-fw fa-check"></i> <?=Page::$local_const['static']['heat_treatment']?></h4>
                     </div>
                     <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
+                        <p>Зміна хімічної стуктури деревини внаслідок тепловій обробці.</p>
 
                     </div>
                 </div>
@@ -99,7 +99,7 @@
                         <h4><i class="fa fa-fw fa-truck"></i> <?=Page::$local_const['static']['wood_transporting']?></h4>
                     </div>
                     <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
+                        <p>Доставка пиломатеріалів нашим транспортом по всій Україні.</p>
 
                     </div>
                 </div>
@@ -110,7 +110,7 @@
                         <h4><i class="fa fa-fw fa-compass"></i> <?=Page::$local_const['static']['fast_perfomance']?></h4>
                     </div>
                     <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
+                        <p>Приступаємо до виконання замовлення одразу ж після обговорення його деталей.</p>
 
                     </div>
                 </div>
