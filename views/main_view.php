@@ -57,7 +57,7 @@
                         <h4><i class="fa fa-fw fa-shopping-cart"></i> <?=Page::$local_const['static']['lumber_sales']?></h4>
                     </div>
                     <div class="panel-body">
-                        <p>Широкий вибір пиломатеріалів на продаж. Маємо індивідуальний підхід до кожного клієнта.</p>
+                        <p><?=Page::$local_const['static']['timber_sale_op']?></p>
                     </div>
                 </div>
             </div>
@@ -67,7 +67,7 @@
                         <h4><i class="fa fa-fw fa-tree"></i> <?=Page::$local_const['static']['jointer']?></h4>
                     </div>
                     <div class="panel-body">
-                        <p>Процес зняття певного шару деревини для придання рівної, плоскої поверхні.</p>
+                        <p><?=Page::$local_const['static']['surface_planer_op']?></p>
 
                     </div>
                 </div>
@@ -78,7 +78,7 @@
                         <h4><i class="fa fa-fw fa-fire"></i> <?=Page::$local_const['static']['wood_drying']?></h4>
                     </div>
                     <div class="panel-body">
-                        <p>Видалення вологи з деревини задля стійкості до загнивання.</p>
+                        <p><?=Page::$local_const['static']['wood_drying_op']?></p>
                     </div>
                 </div>
             </div>
@@ -88,7 +88,7 @@
                         <h4><i class="fa fa-fw fa-check"></i> <?=Page::$local_const['static']['heat_treatment']?></h4>
                     </div>
                     <div class="panel-body">
-                        <p>Зміна хімічної стуктури деревини внаслідок тепловій обробці.</p>
+                        <p><?=Page::$local_const['static']['heat_treatment_op']?></p>
 
                     </div>
                 </div>
@@ -99,7 +99,7 @@
                         <h4><i class="fa fa-fw fa-truck"></i> <?=Page::$local_const['static']['wood_transporting']?></h4>
                     </div>
                     <div class="panel-body">
-                        <p>Доставка пиломатеріалів нашим транспортом по всій Україні.</p>
+                        <p><?=Page::$local_const['static']['wood_transporting_op']?></p>
 
                     </div>
                 </div>
@@ -110,7 +110,7 @@
                         <h4><i class="fa fa-fw fa-compass"></i> <?=Page::$local_const['static']['fast_perfomance']?></h4>
                     </div>
                     <div class="panel-body">
-                        <p>Приступаємо до виконання замовлення одразу ж після обговорення його деталей.</p>
+                        <p><?=Page::$local_const['static']['fast_perfomance_op']?></p>
 
                     </div>
                 </div>

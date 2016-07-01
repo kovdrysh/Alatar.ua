@@ -103,10 +103,10 @@
 <a href="" class="overlay" id="win2"></a>
     <div class="popup">
         <div class = "order-success">
-            <h2><?=Page::$local_const['order_success1']?></h2>
-            <h4><?=Page::$local_const['order_success2']?></h4>
-            <a href="/"><button type="button" class="btn btn-primary">На головну</button></a>
-            <a href = "/product"><button type="button" class="btn btn-primary">До списку товарів</button></a>
+            <h2><?=Page::$local_const['static']['order_success1']?></h2>
+            <h4><?=Page::$local_const['static']['order_success2']?></h4>
+            <a href="/"><button type="button" class="btn btn-primary"><?=Page::$local_const['static']['to_main']?></button></a>
+            <a href = "/product"><button type="button" class="btn btn-primary"><?=Page::$local_const['static']['to_product']?></button></a>
         </div>
     </div>
 
