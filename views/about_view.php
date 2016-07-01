@@ -10,7 +10,7 @@
     <div class="page">
     <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <h1 class="page-header">Наша компанія
+            <h1 class="page-header"><?=Page::$local_const['static']['our_company']?>
 
             </h1>
         </div>
@@ -23,7 +23,7 @@
             <img class="img-responsive" src="http://placehold.it/750x450" alt="">
         </div>
         <div class="col-md-6">
-            <h2>ТОВ "АЛАТАР"</h2>
+            <h2><?=Page::$local_const['static']['ltd']?></h2>
             <p><?=Page::$local_const['static']['about_part1']?></p>
             <p><?=Page::$local_const['static']['about_part2']?></p>
             <p><?=Page::$local_const['static']['about_part3']?></p>
