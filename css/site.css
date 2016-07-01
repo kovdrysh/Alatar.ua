@@ -6,7 +6,6 @@ body{
 	background-color: #ffffff;
 	color: #330000;
 }
-
 .header-style{
 	background-color: #330000;
 	color: #FDFDDA;
@@ -173,7 +172,10 @@ a:hover{
 }
 
 .navbar{
-	min-height: 70px;
+	min-height: 90px;
+}
+.collapse{
+    margin-top: 8px;
 }
 
 .navbar > .container{
@@ -198,6 +200,7 @@ a:hover{
 }
 
 
+
 .navbar-brand{
     padding: 0px;
     line-height: normal;
@@ -210,6 +213,12 @@ a:hover{
 #brand-title{
     display: inline-block;
     font-size: 50px;
+}
+@media all and (max-width: 270px){
+    #brand-title{
+        font-size: 40px;
+        margin-top: 7px;
+    }
 }
 #brand-title-div:after{
     content: '';
@@ -224,7 +233,32 @@ a:hover{
 .footer-container{
     background-color: #2d0303;
     color:#ecec9b;
+    margin-top: 30px;
 }
 .footer-container .container{
     height: auto;
+}
+#contact-map{
+    margin-bottom: 20px;
+}
+@media all and (max-width: 375px) {
+    .footer-col {
+        width: 100%;
+    }
+    #contact-map{
+        height: auto;
+    }
+    .product1 h3{
+        font-size: 18px;
+    }
+    .page-header{
+        font-size: 28px;
+    }
+}
+
+
+@media all and (max-width: 350px){
+    #brand-image{
+        display: none;
+    }
 }

@@ -21,9 +21,9 @@
     <!-- Content Row -->
     <div class="row">
         <!-- Map Column -->
-        <div class="col-md-8">
+        <div class="col-md-8 col-xs-12">
             <!-- Embedded Google Map -->
-            <iframe width="100%" height="500px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="<?=$this->data1[0]['map_link']?>"></iframe>
+            <iframe id="contact-map" width="100%" height="500px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="<?=$this->data1[0]['map_link']?>"></iframe>
         </div>
         <!-- Contact Details Column -->
         <div class="col-md-4">

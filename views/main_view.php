@@ -43,7 +43,7 @@
         <span class="icon-next"></span>
     </a>
 </header>
-<div class="container" style="margin-top: 40px;position: relative; display: table; height: auto;margin-bottom: 40px">
+<div class="container" style="margin-top: 40px;position: relative; display: table; height: auto;">
     <div class="page">
         <div class="row">
             <div class="col-lg-12">
@@ -118,7 +118,5 @@
         </div>
 
         <style>
-            #myCarousel{
-                margin-top: 10px;
-            }
+
         </style>

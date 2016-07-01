@@ -49,8 +49,8 @@
 <nav class="navbar navbar-inverse navbar-fixed-top header-style" role="navigation">
     <div class="header-tel-number col-lg-10 col-lg-offset-1 col-xs-12">
         <span><i class="fa fa-phone"></i> 093-238-32-62</span>
-        <span class="lang" id="ukr" title="Українською"><img src="/images/Ukraine-Flag.png"></span>
-        <span class="lang" id="en" title="English"><img src="/images/United-Kingdom-flag.png"></span>
+        <span class="lang" id="ukr" title="Українською"><?/*if(empty($routes[1])) echo '/';if($routes[0] == 'en') echo ''; else echo $routes[0];*/?><img src="/images/Ukraine-Flag.png"></span>
+        <span class="lang" id="en" title="English"><?/*$_SERVER['REQUEST_URI']; if(empty($routes[0])) echo 'en'; elseif($routes[0]!='en' && $routes[1]!='en') echo '/en';*/?><img src="/images/United-Kingdom-flag.png"></span>
         <?if(IN_ADMIN) {?>
             <span><a href="?exit=1">Вийти</a></span>
             <span><a href="/admin">Сторінка адміністратора</a></span>
@@ -66,7 +66,8 @@
                 <span class="icon-bar"></span>
             </button>
             <div id="brand-title-div">
-                <a class="navbar-brand" href="/"><img src="/images/alatar2.png" style="height:50px">
+                <a class="navbar-brand" href="/">
+                    <img id="brand-image" src="/images/alatar2.png" style="height:50px">
                     <div id="brand-title"> <?=Page::$local_const['static']['Alatar']?></div>
                 </a>
             </div>
