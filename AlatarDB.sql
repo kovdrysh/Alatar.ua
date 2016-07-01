@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1:3306
--- Час створення: Чрв 23 2016 р., 15:01
--- Версія сервера: 5.5.41-log
--- Версія PHP: 5.3.29
+-- Время создания: Июл 01 2016 г., 17:34
+-- Версия сервера: 5.5.41-log
+-- Версия PHP: 5.3.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,13 +17,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- База даних: `AlatarDB`
+-- База данных: `AlatarDB`
 --
 
 -- --------------------------------------------------------
 
 --
--- Структура таблиці `map`
+-- Структура таблицы `map`
 --
 
 CREATE TABLE IF NOT EXISTS `map` (
@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `map` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
--- Дамп даних таблиці `map`
+-- Дамп данных таблицы `map`
 --
 
 INSERT INTO `map` (`id`, `map_link`) VALUES
@@ -42,7 +42,7 @@ INSERT INTO `map` (`id`, `map_link`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблиці `menu_en`
+-- Структура таблицы `menu_en`
 --
 
 CREATE TABLE IF NOT EXISTS `menu_en` (
@@ -53,7 +53,7 @@ CREATE TABLE IF NOT EXISTS `menu_en` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
--- Дамп даних таблиці `menu_en`
+-- Дамп данных таблицы `menu_en`
 --
 
 INSERT INTO `menu_en` (`id`, `caption`) VALUES
@@ -63,7 +63,7 @@ INSERT INTO `menu_en` (`id`, `caption`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблиці `menu_ukr`
+-- Структура таблицы `menu_ukr`
 --
 
 CREATE TABLE IF NOT EXISTS `menu_ukr` (
@@ -74,7 +74,7 @@ CREATE TABLE IF NOT EXISTS `menu_ukr` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
--- Дамп даних таблиці `menu_ukr`
+-- Дамп данных таблицы `menu_ukr`
 --
 
 INSERT INTO `menu_ukr` (`id`, `caption`) VALUES
@@ -84,7 +84,7 @@ INSERT INTO `menu_ukr` (`id`, `caption`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблиці `orders`
+-- Структура таблицы `orders`
 --
 
 CREATE TABLE IF NOT EXISTS `orders` (
@@ -96,10 +96,10 @@ CREATE TABLE IF NOT EXISTS `orders` (
   `date` datetime NOT NULL,
   `done` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=17 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=21 ;
 
 --
--- Дамп даних таблиці `orders`
+-- Дамп данных таблицы `orders`
 --
 
 INSERT INTO `orders` (`id`, `name`, `telNumber`, `email`, `info`, `date`, `done`) VALUES
@@ -108,12 +108,16 @@ INSERT INTO `orders` (`id`, `name`, `telNumber`, `email`, `info`, `date`, `done`
 (12, '', '5350694', '', '', '2016-01-27 13:58:00', 1),
 (13, '', '1111', '', '', '2016-01-27 13:58:00', 1),
 (14, 'Владислав', '0639405773', 'ждьыдвлм', '&lt;p&gt;Брус 100х520 20 шт&lt;/p&gt;\r\n', '2016-02-01 14:52:00', 1),
-(16, 'Юрий Валериевич', '+38067-555-34-29', NULL, '&lt;p&gt;ыаыва&lt;/p&gt;\r\n', '2016-06-10 13:27:00', 0);
+(16, 'Юрий Валериевич', '+38067-555-34-29', NULL, '&lt;p&gt;ыаыва&lt;/p&gt;\r\n', '2016-06-10 13:27:00', 0),
+(17, 'фівфів', 'фівфів', 'фівфів', NULL, '2016-07-01 10:36:00', 1),
+(18, '', 'фывфыв', '', '', '2016-07-01 10:40:00', 0),
+(19, '', '123', '', '', '2016-07-01 11:47:00', 0),
+(20, '', 'q2w', '', '', '2016-07-01 11:52:00', 0);
 
 -- --------------------------------------------------------
 
 --
--- Структура таблиці `pages_en`
+-- Структура таблицы `pages_en`
 --
 
 CREATE TABLE IF NOT EXISTS `pages_en` (
@@ -127,7 +131,7 @@ CREATE TABLE IF NOT EXISTS `pages_en` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
 
 --
--- Дамп даних таблиці `pages_en`
+-- Дамп данных таблицы `pages_en`
 --
 
 INSERT INTO `pages_en` (`id`, `code`, `caption`, `content`, `isContainer`) VALUES
@@ -145,7 +149,7 @@ INSERT INTO `pages_en` (`id`, `code`, `caption`, `content`, `isContainer`) VALUE
 -- --------------------------------------------------------
 
 --
--- Структура таблиці `pages_ukr`
+-- Структура таблицы `pages_ukr`
 --
 
 CREATE TABLE IF NOT EXISTS `pages_ukr` (
@@ -159,7 +163,7 @@ CREATE TABLE IF NOT EXISTS `pages_ukr` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=18 ;
 
 --
--- Дамп даних таблиці `pages_ukr`
+-- Дамп данных таблицы `pages_ukr`
 --
 
 INSERT INTO `pages_ukr` (`id`, `code`, `caption`, `content`, `isContainer`) VALUES
@@ -177,7 +181,7 @@ INSERT INTO `pages_ukr` (`id`, `code`, `caption`, `content`, `isContainer`) VALU
 -- --------------------------------------------------------
 
 --
--- Структура таблиці `products_en`
+-- Структура таблицы `products_en`
 --
 
 CREATE TABLE IF NOT EXISTS `products_en` (
@@ -194,7 +198,7 @@ CREATE TABLE IF NOT EXISTS `products_en` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
--- Дамп даних таблиці `products_en`
+-- Дамп данных таблицы `products_en`
 --
 
 INSERT INTO `products_en` (`id`, `caption`, `menu_type`, `measure`, `price`, `info`, `image`) VALUES
@@ -205,7 +209,7 @@ INSERT INTO `products_en` (`id`, `caption`, `menu_type`, `measure`, `price`, `in
 -- --------------------------------------------------------
 
 --
--- Структура таблиці `products_ukr`
+-- Структура таблицы `products_ukr`
 --
 
 CREATE TABLE IF NOT EXISTS `products_ukr` (
@@ -222,7 +226,7 @@ CREATE TABLE IF NOT EXISTS `products_ukr` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=30 ;
 
 --
--- Дамп даних таблиці `products_ukr`
+-- Дамп данных таблицы `products_ukr`
 --
 
 INSERT INTO `products_ukr` (`id`, `caption`, `menu_type`, `measure`, `price`, `info`, `image`) VALUES
@@ -242,7 +246,7 @@ INSERT INTO `products_ukr` (`id`, `caption`, `menu_type`, `measure`, `price`, `i
 -- --------------------------------------------------------
 
 --
--- Структура таблиці `vacancies_en`
+-- Структура таблицы `vacancies_en`
 --
 
 CREATE TABLE IF NOT EXISTS `vacancies_en` (
@@ -254,7 +258,7 @@ CREATE TABLE IF NOT EXISTS `vacancies_en` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
--- Дамп даних таблиці `vacancies_en`
+-- Дамп данных таблицы `vacancies_en`
 --
 
 INSERT INTO `vacancies_en` (`id`, `caption`, `info`, `image`) VALUES
@@ -264,7 +268,7 @@ INSERT INTO `vacancies_en` (`id`, `caption`, `info`, `image`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблиці `vacancies_ukr`
+-- Структура таблицы `vacancies_ukr`
 --
 
 CREATE TABLE IF NOT EXISTS `vacancies_ukr` (
@@ -273,28 +277,29 @@ CREATE TABLE IF NOT EXISTS `vacancies_ukr` (
   `info` varchar(500) DEFAULT NULL,
   `image` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
--- Дамп даних таблиці `vacancies_ukr`
+-- Дамп данных таблицы `vacancies_ukr`
 --
 
 INSERT INTO `vacancies_ukr` (`id`, `caption`, `info`, `image`) VALUES
-(1, 'Сбивщик поддонов', 'Сбивка поддонов.', 'poddon.jpg'),
-(2, 'Водій', '<p>Водити грузову машину</p>\r\n', 'our_transport.jpg');
+(1, 'Різноробочий', '<p>Виконання різнопланової роботи.</p>\r\n', 'rizno.jpg'),
+(2, 'Водій вантажного автомобіля', '<p>Перевіз деревини.&nbsp;</p>\r\n', 'our_transport.jpg'),
+(3, 'Пилорамщик', '<p>Розпилення деревини.&nbsp;</p>\r\n', 'pila.jpg');
 
 --
--- Обмеження зовнішнього ключа збережених таблиць
+-- Ограничения внешнего ключа сохраненных таблиц
 --
 
 --
--- Обмеження зовнішнього ключа таблиці `products_en`
+-- Ограничения внешнего ключа таблицы `products_en`
 --
 ALTER TABLE `products_en`
   ADD CONSTRAINT `products_en_ibfk_1` FOREIGN KEY (`menu_type`) REFERENCES `menu_en` (`caption`);
 
 --
--- Обмеження зовнішнього ключа таблиці `products_ukr`
+-- Ограничения внешнего ключа таблицы `products_ukr`
 --
 ALTER TABLE `products_ukr`
   ADD CONSTRAINT `products_ukr_ibfk_1` FOREIGN KEY (`menu_type`) REFERENCES `menu_ukr` (`caption`);
