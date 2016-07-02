@@ -7,7 +7,7 @@
  */
 ?>
 <!-- Header Carousel -->
-<header id="myCarousel" class="carousel slide">
+<header id="myCarousel" class="carousel slide" <?if(IN_ADMIN){ echo 'style="margin-top:-20px;"';}?>>
     <!-- Indicators -->
 
 
