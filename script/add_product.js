@@ -24,7 +24,9 @@ $(document).ready(function(){
 
 
     $('.form-div').on('click', '#exec', function(){
-
+        var img = $('#hidden-image').val();
+        var upload2 = document.getElementById('hidden-image');
+        upload2.value = img;
         var data = new FormData;
         $.each(files, function(key, value){
             data.append('image', value);

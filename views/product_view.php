@@ -16,6 +16,7 @@
                     <h1 class="page-header"><?=$row['caption']?></h1>
                 </div>
             </div>
+            <div class="products-container ">
             <?foreach($this->products[$counter] as $row1){?>
                 <div class="col-md-3 col-sm-4 col-xs-6 img-portfolio product">
                     <div class = "product1">
@@ -27,6 +28,7 @@
                     </div>
                 </div>
             <?}?>
+            </div>
         <?}?>
 <style>
 .product1{

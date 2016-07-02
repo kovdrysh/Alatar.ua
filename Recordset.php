@@ -5,7 +5,7 @@
  * Date: 23.09.2015
  * Time: 14:45
  */
-INCLUDE '/DB.php';
+INCLUDE 'DB.php';
 class Recordset {
     private $database;
     private $sth;

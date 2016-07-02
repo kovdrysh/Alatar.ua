@@ -241,6 +241,22 @@ a:hover{
 #contact-map{
     margin-bottom: 20px;
 }
+@media all and (max-width: 991px){
+    .panel{
+        min-height: 125px;
+    }
+    .product1 h3{
+        font-size: 20px;
+    }
+    .product1{
+        min-height: 250px;
+    }
+}
+@media all and (max-width: 775px) {
+    .product1{
+        min-height: auto;
+    }
+}
 @media all and (max-width: 375px) {
     .footer-col {
         width: 100%;
@@ -260,5 +276,11 @@ a:hover{
 @media all and (max-width: 350px){
     #brand-image{
         display: none;
+    }
+}
+
+@media all and (max-width: 1200px){
+    .panel{
+        min-height: 165px;
     }
 }

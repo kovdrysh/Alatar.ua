@@ -159,7 +159,7 @@ class Tables{
         $action = $this->table_name.'/edit/';
         $text = 'Редагувати';
         if($page_code === false){
-            $action = $this->table_name.'/add/';
+            $action = $this->table_name.'/add';
             $text = 'Додати';
         }
         if($page_code) {
@@ -202,7 +202,6 @@ class Tables{
     }
 
     public function execEdit(){
-        var_dump($_POST);
         $com = false;
         $val = 'UPDATE '.$this->table_name.' SET ';
         foreach($this->fields as $field){
@@ -612,7 +611,7 @@ class Field{
                                             <input type="hidden" id="hidden-image" name="'.$this->name.'" value="'.$value.'">
                                             <div id="fileformlabel">'.$value.'</div>
                                             <div class="selectbutton" >Обзор</div>
-                                            <input type="file" class="add add-text form-control" accept="image/*" name="image" id="image">
+                                            <input type="file" class="add add-text form-control" accept="image/*" name="image-input" id="image">
                                         </div>';
                 break;
         }

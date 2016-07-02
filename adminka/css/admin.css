@@ -220,6 +220,10 @@ form input[type="submit"]{
 
 #return-to-admin-page{
     float: right;
+    margin-right: 20px;
+    padding:5px;
+    border: 1px solid black;
+    border-radius:3px;
 }
 .admin-browse-div {
     display: table;
