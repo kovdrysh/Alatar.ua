@@ -308,7 +308,7 @@ class Tables{
                 $comma=true;
             }
         }
-        $sql = "SELECT $flds FROM $table ORDER BY $this->order LIMIT 50";
+        $sql = "SELECT $flds FROM $table ORDER BY $this->order desc";
         return $sql;
     }
 

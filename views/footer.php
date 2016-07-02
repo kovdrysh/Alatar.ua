@@ -67,7 +67,7 @@
             data: 'language=' + this.id,
             type: 'POST',
             success:function(output){
-                location.reload(true);
+                //location.reload(true);
             }
         });
     });

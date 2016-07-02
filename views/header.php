@@ -49,8 +49,8 @@
 <nav class="navbar navbar-inverse navbar-fixed-top header-style" role="navigation">
     <div class="header-tel-number col-lg-10 col-lg-offset-1 col-xs-12">
         <span><i class="fa fa-phone"></i> 093-238-32-62</span>
-        <span class="lang" id="ukr" title="Українською"><?/*if(empty($routes[1])) echo '/';if($routes[0] == 'en') echo ''; else echo $routes[0];*/?><img src="/images/Ukraine-Flag.png"></span>
-        <span class="lang" id="en" title="English"><?/*$_SERVER['REQUEST_URI']; if(empty($routes[0])) echo 'en'; elseif($routes[0]!='en' && $routes[1]!='en') echo '/en';*/?><img src="/images/United-Kingdom-flag.png"></span>
+        <span class="lang" id="ukr" title="Українською"><a href="<?if($routes[0] == 'en') echo '/'; else echo '/'.$routes[0];?>"><img src="/images/Ukraine-Flag.png"></a></span>
+        <span class="lang" id="en" title="English"><a href="<?=$_SERVER['REQUEST_URI']; if(empty($routes[0])) echo 'en'; elseif($routes[0]!='en' && $routes[1]!='en') echo '/en';?>"><img src="/images/United-Kingdom-flag.png"></a></span>
         <?if(IN_ADMIN) {?>
             <span><a href="?exit=1">Вийти</a></span>
             <span><a href="/admin">Сторінка адміністратора</a></span>
