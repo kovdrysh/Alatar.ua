@@ -66,7 +66,7 @@
                 <span class="icon-bar"></span>
             </button>
             <div id="brand-title-div">
-                <a class="navbar-brand" href="/">
+                <a class="navbar-brand" href="<?=$lang?>">
                     <img id="brand-image" src="/images/alatar2.png" style="height:50px">
                     <div id="brand-title"> <?=Page::$local_const['static']['Alatar']?></div>
                 </a>

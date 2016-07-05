@@ -241,6 +241,12 @@ a:hover{
 #contact-map{
     margin-bottom: 20px;
 }
+
+@media all and (max-width: 1199px){
+    .panel{
+        min-height: 165px;
+    }
+}
 @media all and (max-width: 991px){
     .panel{
         min-height: 125px;
@@ -276,11 +282,5 @@ a:hover{
 @media all and (max-width: 350px){
     #brand-image{
         display: none;
-    }
-}
-
-@media all and (max-width: 1200px){
-    .panel{
-        min-height: 165px;
     }
 }
