@@ -47,13 +47,11 @@ else{
     $lang = '/';
 }
 
-
 $code = "main";
 $routes = explode('/', $_SERVER['REQUEST_URI']);
 array_shift($routes);
-
 if($routes[0]==='admin' || file_exists('adminka/'.$routes[0].'.php')){
-    if(IN_ADMIN){
+    if($_SESSION['admin']){
         if($routes[0]=='admin'){
             $title = "Сторінка адміністратора";
             include 'views/header.php';
@@ -70,6 +68,12 @@ if($routes[0]==='admin' || file_exists('adminka/'.$routes[0].'.php')){
         include 'views/footer.php';
     }
 }
+elseif(count($routes) > 2){
+    include 'views/header.php';
+    include 'views/404_view.php';
+    include 'views/footer.php';
+    die;
+}
 else {
     if (!empty($routes[0])) {
         if($routes[0]!='en') {
@@ -77,7 +81,23 @@ else {
         }
     }
     $page = new Page($code);
-
+    if(!$page->notFound){
+        if((isset($routes[1]) && $routes[1]==='en') || ($routes[0]==='en' && count($routes)===1)){
+            $_SESSION['lang'] = '_en';
+            Page::$languagePrefix = $_SESSION['lang'];
+            Page::$local_const = parse_ini_file('en.ini', true);
+            $lang = '/en';
+        }
+        elseif($routes[0]!='en' && count($routes)<=1){
+            $_SESSION['lang'] = '_ukr';
+            Page::$languagePrefix = $_SESSION['lang'];
+            Page::$local_const = parse_ini_file('ukr.ini', true);
+            $lang = '/';
+        }
+        else{
+            $page->notFound=true;
+        }
+    }
     $page->getContent();
 
     $title = $page->getTitle();

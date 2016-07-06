@@ -5,6 +5,7 @@
  * Date: 21.01.2016
  * Time: 13:56
  */
+defined('_INDEX') or die;
 ?>
 <div class="container" style="margin-top: 40px;">
     <div class="page">
@@ -13,11 +14,12 @@
             <div class="error-template">
 
                 <h1>Error 404</h1>
-                <h2><?=Page::$local_const['text1_404']?></h2>
-                <div class="error-details"><?=Page::$local_const['text2_404']?></div>
+                <h2><?=Page::$local_const['static']['text1_404']?></h2>
+                <div class="error-details"><?=Page::$local_const['static']['text2_404']?></div>
                 <div class="error-actions">
-                    <a href="/"><button type="button" class="btn btn-primary style-order-button">На головну</button></a>
-                    <a href="/products"><button type="button" class="btn btn-primary style-order-button">До списку товарів</button></a>
+                    <!--<a href="/"><button type="button" class="btn btn-primary style-order-button">На головну</button></a>
+                    <a href="/product"><button type="button" class="btn btn-primary style-order-button">До списку товарів</button></a>
+                    -->
                 </div>
             </div>
         </div>

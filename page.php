@@ -16,7 +16,7 @@ class Page{
     public $productCategories = array(), $products = array();
     private $data = array(), $data1 = array(), $product_types = array();
     public $contacts = array(), $deliveries = array(), $payments = array();
-    private $notFound=false;
+    public $notFound=false;
 
     public function __construct($code){
         $this->view = $code;
@@ -87,7 +87,8 @@ class Page{
                     $this->title = $this->pcaption . ' - купуйте кращі пиломатеріали в Києві';
                 }
             }
-        }
+        }else
+            $this->view = '404';
         $this->filename = 'views/'.$this->view.'_view.php';
     }
 

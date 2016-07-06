@@ -1,4 +1,5 @@
 <?
+defined('_INDEX') or die;
 include_once 'methods.php';
 if($_POST['order']) {
     $n = json_decode($_POST['order']);

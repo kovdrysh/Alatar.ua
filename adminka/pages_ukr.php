@@ -5,7 +5,7 @@
  * Date: 09.03.2016
  * Time: 17:00
  */
-
+defined('_INDEX') or die;
 include 'views/header.php';
 include_once('adminka/iDataSet.php');
 $table = new Tables('pages_ukr', 'Сторінки', 'code', 'id', Page::$db, 'Таблиця: Сторінки');

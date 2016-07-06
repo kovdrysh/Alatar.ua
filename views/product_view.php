@@ -16,9 +16,9 @@
                     <h1 class="page-header"><?=$row['caption']?></h1>
                 </div>
             </div>
-            <div class="products-container ">
+            <ul class="products-container col-xs-12">
             <?foreach($this->products[$counter] as $row1){?>
-                <div class="col-md-3 col-sm-4 col-xs-6 img-portfolio product">
+                <li class="col-md-3 col-sm-4 col-xs-6 img-portfolio ">
                     <div class = "product1">
                         <img class="img-responsive" src="/images/<?=$row1['image']?>" alt="" style="width: 100%;">
                         <h3>
@@ -26,9 +26,9 @@
                         </h3>
                         <p><?=$row1['price']?> грн/<?=$row1['measure']?></p>
                     </div>
-                </div>
+                </li>
             <?}?>
-            </div>
+            </ul>
         <?}?>
 <style>
 .product1{

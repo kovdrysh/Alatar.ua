@@ -5,7 +5,7 @@
  * Date: 10.06.2016
  * Time: 14:45
  */
-
+defined('_INDEX') or die;
 include 'views/header.php';
 include_once('adminka/iDataSet.php');
 $table = new Tables('menu_en', 'Категорії', 'id', 'id', Page::$db, 'Таблиця: Товари');

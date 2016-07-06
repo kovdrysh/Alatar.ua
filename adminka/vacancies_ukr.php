@@ -5,7 +5,7 @@
  * Date: 11.06.2016
  * Time: 16:53
  */
-
+defined('_INDEX') or die;
 include 'views/header.php';
 include_once('adminka/iDataSet.php');
 $table = new Tables('vacancies_ukr', 'Вакансії', 'id', 'caption', Page::$db, 'Перегляд вакансій');

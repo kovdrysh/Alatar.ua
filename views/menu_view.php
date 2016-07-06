@@ -5,6 +5,11 @@
  * Date: 11.06.2016
  * Time: 12:56
  */
+defined('_INDEX') or die;
+if(!$_SESSION['admin']) {
+    include 'views/404_view.php';
+    exit;
+}
 ?>
 <div class="admin-browse-div" style="margin-top: 40px;">
     <div class="page">

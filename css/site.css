@@ -242,6 +242,15 @@ a:hover{
     margin-bottom: 20px;
 }
 
+.products-container{
+    padding-left: 0;
+}
+
+.products-container li{
+    list-style: none;
+
+}
+
 @media all and (max-width: 1199px){
     .panel{
         min-height: 165px;
@@ -255,10 +264,10 @@ a:hover{
         font-size: 20px;
     }
     .product1{
-        min-height: 250px;
+        min-height: 257px;
     }
 }
-@media all and (max-width: 775px) {
+@media all and (max-width: 767px) {
     .product1{
         min-height: auto;
     }
@@ -282,5 +291,17 @@ a:hover{
 @media all and (max-width: 350px){
     #brand-image{
         display: none;
+    }
+
+    .product1 h3{
+        font-size: 15px;
+    }
+}
+@media all and (max-width: 315px){
+    .product1{
+        word-break: break-all;
+    }
+    .header-tel-number{
+        padding-left: 5px;
     }
 }

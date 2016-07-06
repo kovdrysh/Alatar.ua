@@ -1,4 +1,5 @@
 <?
+defined('_INDEX') or die;
 ?>
 </div>
 </div>
@@ -39,15 +40,13 @@
 <script src="/script/bootstrap.min.js"></script>
 <!--<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>-->
 <script type="text/javascript" src="/script/add_product.js"></script>
-<script type="text/javascript" src="/script/left_menu.js"></script>
 <script type="text/javascript" src="/script/order.js"></script>
 <script type="text/javascript" src="/script/enterAdmin.js"></script>
 <script type="text/javascript" src="/script/map_change.js"></script>
 <script type="text/javascript" src="/script/contacts_change.js"></script>
 <script type="text/javascript" src="/script/delivery_change.js"></script>
-<script type="text/javascript" src="/script/vacancy_change.js"></script>
 <script type="text/javascript" src="/script/order_success.js"></script>
-<?if(IN_ADMIN){?>
+<?if($_SESSION['admin']){?>
 <script type="text/javascript" src="/adminka/script/jquery-ui.min.js"></script>
 <script type="text/javascript" src="/adminka/script/search.js"></script>
 <script type="text/javascript" src="/adminka/script/admin_fw_src.js"></script>

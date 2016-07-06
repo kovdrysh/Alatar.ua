@@ -5,9 +5,10 @@
  * Date: 26.01.2016
  * Time: 17:49
  */
+defined('_INDEX') or die;
 ?>
 <!-- Header Carousel -->
-<header id="myCarousel" class="carousel slide" <?if(IN_ADMIN){ echo 'style="margin-top:-20px;"';}?>>
+<header id="myCarousel" class="carousel slide" <?if($_SESSION['admin']){ echo 'style="margin-top:-20px;"';}?>>
     <!-- Indicators -->
 
 

@@ -5,7 +5,7 @@
  * Date: 11.06.2016
  * Time: 13:25
  */
-
+defined('_INDEX') or die;
 include 'views/header.php';
 include_once('adminka/iDataSet.php');
 $table=new Tables('map', 'Мапа', 'id', 'map_link',Page::$db,'');

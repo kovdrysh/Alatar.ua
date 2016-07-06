@@ -1,7 +1,9 @@
 <?php
-if(!IN_ADMIN) {
-    echo '<script>window.location.href = "/404"</script>';
-    return;
+
+defined('_INDEX') or die;
+if(!$_SESSION['admin']) {
+    include 'views/404_view.php';
+    die;
 }
 ?>
 <div class="admin-browse-div" style="margin-top: 40px;">

@@ -5,10 +5,9 @@
  * Date: 07.06.2016
  * Time: 22:41
  */
-if(!IN_ADMIN) {
-//    echo '<script>window.location.href = "/404"</script>';
-//    return;
-    include '/views/404_view.php';
+defined('_INDEX') or die;
+if(!$_SESSION['admin']) {
+    include 'views/404_view.php';
     exit;
 }
 ?>

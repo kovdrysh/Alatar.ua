@@ -5,6 +5,7 @@
  * Date: 03.03.2016
  * Time: 13:29
  */
+defined('_INDEX') or die;
 include_once 'Recordset.php';
 
 class Tables{

@@ -5,6 +5,7 @@
  * Date: 26.01.2016
  * Time: 17:39
  */
+defined('_INDEX') or die;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +26,7 @@
     <!-- Custom CSS -->
     <link href="/css/modern-business.css" rel="stylesheet">
     <link href="/css/login.css" rel="stylesheet">
-    <?if(IN_ADMIN){?>
+    <?if($_SESSION['admin']){?>
     <link rel="stylesheet" href="/adminka/css/admin.css">
     <link rel="stylesheet" href="/adminka/css/jquery-ui-timepicker-addon.css">
     <link rel="stylesheet" href="/adminka/css/jquery-ui.css">
@@ -51,7 +52,7 @@
         <span><i class="fa fa-phone"></i> 093-238-32-62</span>
         <span class="lang" id="ukr" title="Українською"><a href="<?if($routes[0] == 'en') echo '/'; else echo '/'.$routes[0];?>"><img src="/images/Ukraine-Flag.png"></a></span>
         <span class="lang" id="en" title="English"><a href="<?=$_SERVER['REQUEST_URI']; if(empty($routes[0])) echo 'en'; elseif($routes[0]!='en' && $routes[1]!='en') echo '/en';?>"><img src="/images/United-Kingdom-flag.png"></a></span>
-        <?if(IN_ADMIN) {?>
+        <?if($_SESSION['admin']) {?>
             <span><a href="?exit=1">Вийти</a></span>
             <span><a href="/admin">Сторінка адміністратора</a></span>
         <?}?>

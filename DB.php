@@ -5,6 +5,8 @@
  * Date: 19.09.2015
  * Time: 14:28
  */
+
+defined('_INDEX') or die;
 class DB{
     private static $instance;
     private $dbh;

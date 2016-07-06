@@ -5,6 +5,7 @@
  * Date: 23.01.2016
  * Time: 12:11
  */
+defined('_INDEX') or die;
 $directory = 'images';
 if(isset($_FILES['image'])){
     $file_name = $_FILES['image']['name'];

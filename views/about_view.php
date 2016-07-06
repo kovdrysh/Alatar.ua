@@ -5,6 +5,7 @@
  * Date: 26.01.2016
  * Time: 19:33
  */
+defined('_INDEX') or die;
 ?>
 <div class="container" >
     <div class="page">
