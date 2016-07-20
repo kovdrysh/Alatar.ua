@@ -10,6 +10,7 @@ include 'views/header.php';
 include_once('adminka/iDataSet.php');
 $table = new Tables('products_ukr', 'Товари', 'id', 'id', Page::$db, 'Таблиця: Товари');
 $table->addField('id', 'int', 'ID', true, false, true, false);
+$table->addField('code', 'text', 'Код', false, false, true, false);
 $table->addField('caption', 'text', 'Назва', false, true, true, false);
 $table->addField('menu_type', 'lookup', 'Тип меню', false, true, true, false);
 $table->addLookupField('menu_type', 'menu_ukr', 'caption', 'caption');

@@ -117,7 +117,52 @@ defined('_INDEX') or die;
                 </div>
             </div>
         </div>
+    </div>
+</div>
+<div class="reasons">
+    <div class="container">
+        <h1>Чому клієнти звертаються до нас</h1>
+        <div class="reason-items">
+            <div class="item col-sm-6">
+                <div class="item-img">
+                    <img src="/images/pricing-reason-img.png">
+                </div>
+                <div class="item-text">
+                    <span><strong>Вигідні ціни</strong></span>
+                    Купуйте якісні пиломатеріали по вигідним цінам.
+                </div>
+            </div>
+            <div class="item col-sm-6">
+                <div class="item-img">
+                    <img src="/images/quality_reason_img.png">
+                </div>
+                <div class="item-text">
+                    <span><strong>Якісна продукція</strong></span>
+                    Ми гарантуємо високу якість товарів. Кваліфіковані спеціалісти контролюють процес виробництва товарів.
+                </div>
+            </div>
+            <div class="item col-sm-6">
+                <div class="item-img">
+                    <img src="/images/choice_reason_img.png">
+                </div>
+                <div class="item-text">
+                    <span><strong>Широкий вибір товарів</strong></span>
+                    Ми надаємо великий асортимент товарів. Продукція з різних порід дерев, та необхідних розмірів.
+                </div>
+            </div>
+            <div class="item col-sm-6">
+                <div class="item-img">
+                    <img src="/images/workers_reason_img.png">
+                </div>
+                <div class="item-text">
+                    <span><strong>Кваліфіковані спеціалісти</strong></span>
+                    У нас працюють висококваліфіковані спеціалісти області деревообробки.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-        <style>
+<style>
 
-        </style>
+</style>

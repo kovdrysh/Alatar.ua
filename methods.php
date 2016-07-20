@@ -14,31 +14,14 @@ class SQLMethods{
             $data->date = date('Y-m-d H:i');
             $db = new Recordset();
             $db->connect();
-            $db->SQL("INSERT INTO orders (name, telNumber, email, info, date, done) VALUES (?,?,?,?,?,?)",  
-                strip_tags($data->name), strip_tags($data->telNumber), strip_tags($data->email), strip_tags($data->info), $data->date, 0);
+            $db->SQL("INSERT INTO orders (name, telNumber, email, info, date, done) VALUES (?,?,?,?,?,?)",
+                $data->name, $data->telNumber, $data->email, strip_tags($data->info), $data->date, 0);
+            mail("artem.astakhov95@gmail.com", "Замовлення пиломатеріалів", "Доброго дня\n\n$data->info\n\nІм'я: $data->name\nКонтактний телефон: $data->telNumber\nЕлектронна адреса: $data->email");
         }catch(Exception $e){
             echo $e;
         }
        
     }
-
-    /*public static function checkUser($json){
-        $data = json_decode($json);
-        try{
-            $db = new Recordset();
-            $db->connect(self::$host, self::$dbname, self::$user, self::$pass);
-            $db->SQL("SELECT password FROM users WHERE login = ?",$data->login);
-        }catch(Exception $e){
-            echo $e;
-        }
-       $pass = $db->nextRow();
-
-        if ($pass[0] == $data->password){
-            echo "/admin";
-        }
-    }*/
-
-
 
 
     public static function setLanguageInfo($lang){

@@ -6,7 +6,7 @@
  * Time: 19:48
  */
 ?>
-<div class="container" style="margin-top: 40px;">
+<div class="container" style="margin-top: 40px;margin-bottom: 50px;">
     <div class="page">
         <?$counter = -1;
         foreach($this->data as $row){
@@ -16,25 +16,24 @@
                     <h1 class="page-header"><?=$row['caption']?></h1>
                 </div>
             </div>
-            <ul class="products-container col-xs-12">
+            <div class="products-container">
             <?foreach($this->products[$counter] as $row1){?>
-                <li class="col-md-3 col-sm-4 col-xs-6 img-portfolio ">
-                    <div class = "product1">
-                        <img class="img-responsive" src="/images/<?=$row1['image']?>" alt="" style="width: 100%;">
-                        <h3>
-                            <?=$row1['caption']?>
-                        </h3>
+                <div class="img-portfolio ">
+                    <!--<div class = "product1">-->
+                        <span><?=$lang?></span>
+                        <a href="/<?=$row1['code']?>">
+                            <img class="img-responsive" src="/images/<?=$row1['image']?>" alt="" style="width: 100%;">
+                        </a>
+                        <a href="/<?=$row1['code'].$lang?>">
+                            <h3><?=$row1['caption']?></h3>
+                        </a>
                         <p><?=$row1['price']?> грн/<?=$row1['measure']?></p>
-                    </div>
-                </li>
+
+                </div>
             <?}?>
-            </ul>
+            </div>
         <?}?>
 <style>
-.product1{
-    box-shadow: 0 0 5px rgba(0,0,0,0.5);
-    padding:10px;
-}
 
 
 

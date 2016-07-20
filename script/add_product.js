@@ -38,7 +38,7 @@ $(document).ready(function(){
             processData: false,
             data: data,
             success:function(output){
-                alert(output);
+
             }
         });
 

@@ -15,7 +15,7 @@ class Page{
     private $view='main', $filename, $title = 'ТОВ "АЛАТАР" купить пиломатериалы недорого Киев';
     public $productCategories = array(), $products = array();
     private $data = array(), $data1 = array(), $product_types = array();
-    public $contacts = array(), $deliveries = array(), $payments = array();
+    public $contacts = array(), $deliveries = array(), $payments = array(), $relatedProducts = array();
     public $notFound=false;
 
     public function __construct($code){
@@ -28,8 +28,16 @@ class Page{
             self::$db->SQL($sql);
             $this->field = self::$db->nextRow();
             if(!$this->field){
-                $this->notFound = true;
-                $this->view = '404';
+                $sql = "SELECT code FROM products".self::$languagePrefix." WHERE code = '".$this->code."'";
+                self::$db->SQL($sql);
+                $this->field = self::$db->nextRow();
+                if(!$this->field) {
+                    $this->notFound = true;
+                    $this->view = '404';
+                }
+                else{
+                    $this->view = 'product_page';
+                }
             }
         }
         $this->content = $this->field['content'];
@@ -71,20 +79,22 @@ class Page{
 
                 }
             } else {
-                $sql = "SELECT * FROM products".self::$languagePrefix." where code = '" . $this->code . "'";
-                self::$db->SQL($sql);
-                $pr = self::$db->nextRow();
-                if (!$pr) {
-                    $this->view = '404';
-                } else {
-                    $this->view = 'product';
-                    $this->pcaption = $pr['caption'];
-                    $this->ptype = $pr['type'];
-                    $this->pprice = $pr['price'];
-                    $this->pmeasure = $pr['measure'];
-                    $this->pinfo = $pr['info'];
-                    $this->pimage = $pr['image'];
-                    $this->title = $this->pcaption . ' - купуйте кращі пиломатеріали в Києві';
+                if($this->view=='product_page') {
+                    $sql = "SELECT * FROM products" . self::$languagePrefix . " where code = '" . $this->code . "'";
+                    self::$db->SQL($sql);
+                    $this->field = self::$db->nextRow();
+                    if (!$this->field) {
+                        $this->view = '404';
+                    } else {
+                        $this->getRelatedProducts('products'.self::$languagePrefix, 8);
+                        $this->pcaption = $this->field['caption'];
+                        $this->ptype = $this->field['menu_type'];
+                        $this->pprice = $this->field['price'];
+                        $this->pmeasure = $this->field['measure'];
+                        $this->pinfo = $this->field['info'];
+                        $this->pimage = $this->field['image'];
+                        $this->title = $this->pcaption . ' - купуйте кращі пиломатеріали в Києві';
+                    }
                 }
             }
         }else
@@ -106,6 +116,13 @@ class Page{
     }
 
 
+    private function getRelatedProducts($table, $amount){
+        $sql = "SELECT * FROM $table WHERE menu_type='".$this->field['menu_type']."' AND id<>".$this->field['id']." LIMIT $amount";
+        self::$db->SQL($sql);
+        while($row = self::$db->nextRow()){
+            array_push($this->relatedProducts, $row);
+        }
+    }
 
 
 }

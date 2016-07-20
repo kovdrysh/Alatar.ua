@@ -9,7 +9,7 @@
 defined('_INDEX') or die;
 include 'views/header.php';
 include_once('adminka/iDataSet.php');
-$table = new Tables('vacancies_en', 'Вакансії', 'id', 'caption', Page::$db, 'Перегляд вакансій');
+$table = new Tables('vacancies_en', 'Вакансії', 'id', 'id', Page::$db, 'Перегляд вакансій');
 $table->addField('id', 'int', 'ID', true, false, true, false);
 $table->addField('caption', 'text', 'Назва', false, true, true, false);
 $table->addField('info', 'varchar', 'Інфоормація', false, true, true, false);
