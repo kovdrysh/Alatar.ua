@@ -5,7 +5,7 @@ if(!$_SESSION['admin']) {
     die;
 }
 ?>
-<div class="container" style="margin-top: 40px;">
+<div class="container">
     <div class="page">
         <div class="row">
             <div class="col-lg-12">

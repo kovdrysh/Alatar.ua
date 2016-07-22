@@ -11,7 +11,7 @@ if(!$_SESSION['admin']) {
     die;
 }
 ?>
-<div class="admin-browse-div" style="margin-top: 40px;">
+<div class="admin-browse-div">
     <div class="page">
         <div class="cont admin-browse-view" style="margin-left: auto; margin-right: auto;">
             <?if($action == 'browse'){?>

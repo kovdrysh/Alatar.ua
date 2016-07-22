@@ -121,15 +121,15 @@ defined('_INDEX') or die;
 </div>
 <div class="reasons">
     <div class="container">
-        <h1>Чому клієнти звертаються до нас</h1>
+        <h1><?=Page::$local_const['static']['why_us']?></h1>
         <div class="reason-items">
             <div class="item col-sm-6">
                 <div class="item-img">
                     <img src="/images/pricing-reason-img.png">
                 </div>
                 <div class="item-text">
-                    <span><strong>Вигідні ціни</strong></span>
-                    Купуйте якісні пиломатеріали по вигідним цінам.
+                    <span><strong><?=Page::$local_const['static']['reasonable_price']?></strong></span>
+                    <?=Page::$local_const['static']['reasonable_price_text']?>
                 </div>
             </div>
             <div class="item col-sm-6">
@@ -137,8 +137,8 @@ defined('_INDEX') or die;
                     <img src="/images/quality_reason_img.png">
                 </div>
                 <div class="item-text">
-                    <span><strong>Якісна продукція</strong></span>
-                    Ми гарантуємо високу якість товарів. Кваліфіковані спеціалісти контролюють процес виробництва товарів.
+                    <span><strong><?=Page::$local_const['static']['quality_products']?></strong></span>
+                    <?=Page::$local_const['static']['quality_products_text']?>
                 </div>
             </div>
             <div class="item col-sm-6">
@@ -146,8 +146,8 @@ defined('_INDEX') or die;
                     <img src="/images/choice_reason_img.png">
                 </div>
                 <div class="item-text">
-                    <span><strong>Широкий вибір товарів</strong></span>
-                    Ми надаємо великий асортимент товарів. Продукція з різних порід дерев, та необхідних розмірів.
+                    <span><strong><?=Page::$local_const['static']['big_assortment']?></strong></span>
+                    <?=Page::$local_const['static']['big_assortment_text']?>
                 </div>
             </div>
             <div class="item col-sm-6">
@@ -155,8 +155,8 @@ defined('_INDEX') or die;
                     <img src="/images/workers_reason_img.png">
                 </div>
                 <div class="item-text">
-                    <span><strong>Кваліфіковані спеціалісти</strong></span>
-                    У нас працюють висококваліфіковані спеціалісти області деревообробки.
+                    <span><strong><?=Page::$local_const['static']['qualified_specialists']?></strong></span>
+                    <?=Page::$local_const['static']['qualified_specialists_text']?>
                 </div>
             </div>
         </div>

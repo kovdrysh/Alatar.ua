@@ -1,7 +1,7 @@
 <?php
 defined('_INDEX') or die;
 ?>
-<div class="container" style="margin-top: 40px;">
+<div class="container">
     <div class="page">
    
     <div class="row">

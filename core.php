@@ -7,7 +7,6 @@
  */
 include "auth.php";
 
-//include 'ErrorHandler.php';
 $ex = explode('?', $_SERVER['REQUEST_URI']);
 if($ex[1] === 'exit=1'){
     $_SESSION = array();
@@ -16,8 +15,6 @@ if($ex[1] === 'exit=1'){
 }
 
 session_start();
-//set_error_handler('\\ErrorHandler::myErrorHandler');
-//register_shutdown_function('\\ErrorHandler::fatalErrorHandler');
 include 'Recordset.php';
 include 'page.php';
 Page::$db = new Recordset();
@@ -31,20 +28,20 @@ if(isset($_SESSION['lang'])){
 else{
     Page::$languagePrefix = '_ukr';
 }
-$lang = '/';
+Page::$lang = '/';
 if(isset($_SESSION['lang'])){
     if($_SESSION['lang'] == '_en'){
         Page::$local_const = parse_ini_file('en.ini', true);
-        $lang = '/en';
+        Page::$lang = '/en';
     }
     elseif($_SESSION['lang'] == '_ukr'){
         Page::$local_const = parse_ini_file('ukr.ini', true);
-        $lang = '/';
+        Page::$lang = '/';
     }
 }
 else{
     Page::$local_const = parse_ini_file('ukr.ini', true);
-    $lang = '/';
+    Page::$lang = '/';
 }
 
 $code = "main";
@@ -80,19 +77,23 @@ else {
             $code = $routes[0];
         }
     }
+    if(isset($routes[1]) && $routes[1]==='en'){
+        $_SESSION['lang'] = '_en';
+        Page::$languagePrefix = $_SESSION['lang'];
+    }
     $page = new Page($code);
     if(!$page->notFound){
         if((isset($routes[1]) && $routes[1]==='en') || ($routes[0]==='en' && count($routes)===1)){
             $_SESSION['lang'] = '_en';
             Page::$languagePrefix = $_SESSION['lang'];
             Page::$local_const = parse_ini_file('en.ini', true);
-            $lang = '/en';
+            Page::$lang = '/en';
         }
         elseif($routes[0]!='en' && count($routes)<=1){
             $_SESSION['lang'] = '_ukr';
             Page::$languagePrefix = $_SESSION['lang'];
             Page::$local_const = parse_ini_file('ukr.ini', true);
-            $lang = '/';
+            Page::$lang = '/';
         }
         else{
             $page->notFound=true;

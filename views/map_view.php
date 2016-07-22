@@ -5,7 +5,7 @@ if(!$_SESSION['admin']) {
 	exit;
 }
 ?>
-<div class="admin-browse-div" style="margin-top: 40px;">
+<div class="admin-browse-div">
 <div class="page">
 	<!--<div class= "change-map">
           <span>Змінити карту</span>

@@ -2,7 +2,7 @@
 defined('_INDEX') or die;
 ?>
 
-<div class="container" style="margin-top: 40px;">
+<div class="container">
     <div class="page">
     <div class="row">
             <div class="col-md-8">
@@ -41,7 +41,7 @@ defined('_INDEX') or die;
             </div>
     </div>
 
-
+<script type="text/javascript" src="/script/order.js"></script>
 <style>
     #success{
         color:red;

@@ -20,20 +20,14 @@ defined('_INDEX') or die;
     <!--<link rel="shortcut icon" href="/images/copy2_converted.ico" type="image/x-icon">-->
     <link rel="shortcut icon" href="http://alatar.ua/images/favicon.ico">
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
-    <!-- Bootstrap Core CSS -->
     <link href="/css/bootstrap.css" rel="stylesheet">
-
     <!-- Custom CSS -->
-    <link href="/css/modern-business.css" rel="stylesheet">
-    <link href="/css/login.css" rel="stylesheet">
     <?if($_SESSION['admin']){?>
     <link rel="stylesheet" href="/adminka/css/admin.css">
     <link rel="stylesheet" href="/adminka/css/jquery-ui-timepicker-addon.css">
     <link rel="stylesheet" href="/adminka/css/jquery-ui.css">
     <?}?>
-    <!-- Custom Fonts -->
-	<link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
-	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
     <link href="/css/site.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -67,32 +61,34 @@ defined('_INDEX') or die;
                 <span class="icon-bar"></span>
             </button>
             <div id="brand-title-div">
-                <a class="navbar-brand" href="<?=$lang?>">
+                <a class="navbar-brand" href="<?=Page::$lang?>">
                     <img id="brand-image" src="/images/alatar2.png" style="height:50px">
                     <div id="brand-title"> <?=Page::$local_const['static']['Alatar']?></div>
+                    <span id="brand-text"><?=Page::$local_const['static']['Alatar_subtext']?></span>
                 </a>
+
             </div>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="<?=$lang?>"><i class = "fa fa-home"></i> <?=Page::$local_const['static']['main_page']?></a>
+                    <a href="<?=Page::$lang?>"><i class = "fa fa-home"></i> <?=Page::$local_const['static']['main_page']?></a>
                 </li>
                 <li>
-                    <a href="/about<?=$lang?>"><i class = "fa fa-tree"></i> <?=Page::$local_const['static']['about']?></a>
+                    <a href="/about<?=Page::$lang?>"><i class = "fa fa-tree"></i> <?=Page::$local_const['static']['about']?></a>
                 </li>
                 <li>
-                    <a href="/product<?=$lang?>"><i class = "fa fa-bars"></i> <?=Page::$local_const['static']['products']?></a>
+                    <a href="/product<?=Page::$lang?>"><i class = "fa fa-bars"></i> <?=Page::$local_const['static']['products']?></a>
                 </li>
                 <li>
-                    <a href="/vacancy<?=$lang?>"><i class="fa fa-info"></i> <?=Page::$local_const['static']['vacancy']?></a>
+                    <a href="/vacancy<?=Page::$lang?>"><i class="fa fa-info"></i> <?=Page::$local_const['static']['vacancy']?></a>
                 </li>
                 <li>
-                    <a href="/contacts<?=$lang?>"><i class="fa fa-info"></i> <?=Page::$local_const['static']['contacts']?></a>
+                    <a href="/contacts<?=Page::$lang?>"><i class="fa fa-info"></i> <?=Page::$local_const['static']['contacts']?></a>
                 </li>
                 <li>
-                    <a href="/order<?=$lang?>"><i class="fa fa-shopping-cart"></i> <?=Page::$local_const['static']['order']?></a>
+                    <a href="/order<?=Page::$lang?>"><i class="fa fa-shopping-cart"></i> <?=Page::$local_const['static']['order']?></a>
                 </li>
                 
                 

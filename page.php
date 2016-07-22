@@ -9,10 +9,10 @@
 include_once 'Recordset.php';
 class Page{
     public static $db;
-    public static $languagePrefix, $local_const;
+    public static $languagePrefix, $local_const, $lang;
     private $code,$caption,$content,$parentCode,$isContainer,$aliasOf,$productCode;
     private $pcaption,$ptype,$pmeasure,$pprice,$pinfo,$pimage;
-    private $view='main', $filename, $title = 'ТОВ "АЛАТАР" купить пиломатериалы недорого Киев';
+    private $view='main', $filename, $title = 'Купуйте кращі пиломатеріали в Києві';
     public $productCategories = array(), $products = array();
     private $data = array(), $data1 = array(), $product_types = array();
     public $contacts = array(), $deliveries = array(), $payments = array(), $relatedProducts = array();

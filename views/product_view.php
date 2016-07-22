@@ -19,12 +19,10 @@
             <div class="products-container">
             <?foreach($this->products[$counter] as $row1){?>
                 <div class="img-portfolio ">
-                    <!--<div class = "product1">-->
-                        <span><?=$lang?></span>
-                        <a href="/<?=$row1['code']?>">
-                            <img class="img-responsive" src="/images/<?=$row1['image']?>" alt="" style="width: 100%;">
+                        <a href="/<?=$row1['code'].Page::$lang?>">
+                            <img class="img-responsive" src="/images/<?=$row1['image']?>" alt="<?=$row1['caption']?>" style="width: 100%;">
                         </a>
-                        <a href="/<?=$row1['code'].$lang?>">
+                        <a href="/<?=$row1['code'].Page::$lang?>">
                             <h3><?=$row1['caption']?></h3>
                         </a>
                         <p><?=$row1['price']?> грн/<?=$row1['measure']?></p>
@@ -33,8 +31,3 @@
             <?}?>
             </div>
         <?}?>
-<style>
-
-
-
-</style>

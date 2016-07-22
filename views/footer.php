@@ -5,7 +5,7 @@ defined('_INDEX') or die;
 </div>
 <div class="footer-container">
     <div class="container">
-        <footer id = "footer" style="margin-top: 20px;">
+        <footer id = "footer">
             <div class="row">
                 <div class="col-lg-12 col-sm-12">
                     <div class="footer-col col-lg-4 col-sm-4 col-xs-6">
@@ -30,26 +30,18 @@ defined('_INDEX') or die;
     </div>
 </div>
 
+<link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
 <script src="/script/jquery.js"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="/script/bootstrap.min.js"></script>
-<!--<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>-->
-<script type="text/javascript" src="/script/add_product.js"></script>
-<script type="text/javascript" src="/script/order.js"></script>
 <script type="text/javascript" src="/script/enterAdmin.js"></script>
-<script type="text/javascript" src="/script/map_change.js"></script>
-<script type="text/javascript" src="/script/contacts_change.js"></script>
-<script type="text/javascript" src="/script/delivery_change.js"></script>
-<script type="text/javascript" src="/script/order_success.js"></script>
 <?if($_SESSION['admin']){?>
+<script type="text/javascript" src="/script/add_product.js"></script>
 <script type="text/javascript" src="/adminka/script/jquery-ui.min.js"></script>
 <script type="text/javascript" src="/adminka/script/search.js"></script>
 <script type="text/javascript" src="/adminka/script/admin_fw_src.js"></script>
 <script type="text/javascript" src="/adminka/script/jquery-ui-timepicker-addon.js"></script>
+<script type="text/javascript" src="/ckeditor/ckeditor.js"></script>
 <?}?>
 
-<script type="text/javascript" src="/ckeditor/ckeditor.js"></script>
 <script type="text/javascript" src="/script/bootstrap.min.js"></script>
 <script>
     $('.carousel').carousel({

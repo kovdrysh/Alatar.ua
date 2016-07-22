@@ -7,7 +7,7 @@
  */
 defined('_INDEX') or die;
 ?>
-<div class="container" style="margin-top: 40px;">
+<div class="container">
     <div class="page">
         <div class="cont admin-browse-view" style="width: 960px; margin-left: auto; margin-right: auto;">
             <?if($action == 'browse'){?>
