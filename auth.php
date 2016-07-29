@@ -5,23 +5,17 @@ session_start();
 $n = json_decode($_POST['entering']);
 $login_post = htmlspecialchars(strip_tags($n->log));
 $passw_post = htmlspecialchars(strip_tags($n->pass));
-/*
-$access1 = array();
-$access1 = file("access.php");
-$access1[2] = password_hash($passw_post, PASSWORD_DEFAULT);
 
-$f = fopen("access.php", "w");
-fputs($f, implode("", $access1));
-fclose($f);
-*/
+include 'Recordset.php';
+$db = new Recordset();
+$db->connect();
+//$db->SQL("INSERT INTO admin_pasw (user, password) VALUES (?,?)", $login_post, password_hash($passw_post, PASSWORD_DEFAULT));
+//$db->SQL("UPDATE admin_pasw SET password=?", password_hash($passw_post, PASSWORD_BCRYPT));
 
-$access = array();
-$access = file("access.php");
+$db->SQL("SELECT * FROM admin_pasw WHERE user=?", $login_post);
+$passw = $db->nextRow();
 
-$login = trim($access[1]);
-$passw = trim($access[2]);
-
-if(($login_post === $login) && password_verify($passw_post, $passw)){
+if(($login_post === $passw['user']) && password_verify($passw_post, $passw['password'])){
 	$_SESSION['admin'] = true;
 	echo true;
 }

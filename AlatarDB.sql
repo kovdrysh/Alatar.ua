@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1:3306
--- Час створення: Лип 21 2016 р., 18:22
+-- Час створення: Лип 28 2016 р., 18:10
 -- Версія сервера: 5.5.41-log
--- Версія PHP: 5.6.3
+-- Версія PHP: 5.5.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -19,6 +19,27 @@ SET time_zone = "+00:00";
 --
 -- База даних: `AlatarDB`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблиці `admin_pasw`
+--
+
+CREATE TABLE IF NOT EXISTS `admin_pasw` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user` varchar(100) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `user` (`user`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Дамп даних таблиці `admin_pasw`
+--
+
+INSERT INTO `admin_pasw` (`id`, `user`, `password`) VALUES
+(1, 'admin', '$2y$10$TKh.gnD58XXN2xNRwqweb.DMlDgm6wmYkOYrVd.VjJ2VVBb1aKeGO');
 
 -- --------------------------------------------------------
 

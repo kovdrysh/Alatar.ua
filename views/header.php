@@ -13,7 +13,8 @@ defined('_INDEX') or die;
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Кращі пиломатеріали в Києві.....">
+    <meta name="description" content="<?=Page::$local_const['description']['description']?>">
+    <meta name="keywords" content="пиломатеріали, вироби з дерева, дошка, брус, пиломатериалы, вагонка, доска, левый берег, пиломатериалы Киев">
     <meta name="author" content="">
 
     <title><?=$title?></title>

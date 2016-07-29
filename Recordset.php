@@ -5,8 +5,8 @@
  * Date: 23.09.2015
  * Time: 14:45
  */
-defined('_INDEX') or die;
-INCLUDE 'DB.php';
+
+include_once 'DB.php';
 class Recordset {
     private $database;
     private $sth;
