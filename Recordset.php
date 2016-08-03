@@ -25,6 +25,16 @@ class Recordset {
         return $this->sth->fetch();
     }
 
+    public function allRows()
+    {
+        return $this->sth->fetchAll();
+    }
+
+    public function getColumn()
+    {
+        return $this->sth->fetchAll(PDO::FETCH_COLUMN);
+    }
+
     public function getSTH(){
         return $this->sth;
     }

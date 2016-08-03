@@ -14,12 +14,9 @@ if ($ex[1] === 'exit=1') {
     echo '<script type="text/javascript">window.location.href="/"</script>';
 }
 
-include_once 'Recordset.php';
+//include_once 'Recordset.php';
 include_once 'page.php';
-Page::$db = new Recordset();
-Page::$db->connect();
-Page::$db->SQL("SET NAMES 'utf8' COLLATE 'utf8_general_ci'");
-Page::$db->SQL("SET CHARACTER SET 'utf8'");
+
 
 if (isset($_SESSION['lang'])) {
     Page::$languagePrefix = $_SESSION['lang'];
@@ -39,7 +36,7 @@ if (isset($_SESSION['lang'])) {
     Page::$local_const = parse_ini_file('ukr.ini', true);
     Page::$lang = '/';
 }
-
+Page::connectDB();
 $code = "main";
 $routes = explode('/', filter_input(INPUT_SERVER, 'REQUEST_URI', FILTER_SANITIZE_SPECIAL_CHARS));
 

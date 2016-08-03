@@ -7,6 +7,11 @@
  */
 
 include_once 'Recordset.php';
+
+/**
+ * Class Page
+ * Класс работы с страницей
+ */
 class Page
 {
     public static $db;
@@ -44,6 +49,14 @@ class Page
         $this->caption = $this->field['caption'];
         $this->isContainer = $this->field['isContainer'];
         $this->title = $this->caption;
+    }
+
+    public static function connectDB()
+    {
+        self::$db = new Recordset();
+        self::$db->connect();
+        self::$db->SQL("SET NAMES 'utf8' COLLATE 'utf8_general_ci'");
+        self::$db->SQL("SET CHARACTER SET 'utf8'");
     }
 
     public function getContent()
